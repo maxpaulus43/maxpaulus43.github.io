@@ -1,15 +1,23 @@
 ---
 layout: page
-title: About
+title: About Me
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+The purpose of this website is to be a storage space for everything
+that I want to keep relevant to me. My goals in making this website
+are as follows:
 
-You can find the source code for the Jekyll new theme at:
-{% include icon-github.html username="jglovier" %} /
-[jekyll-new](https://github.com/jglovier/jekyll-new)
+1. To learn the following technologies:
+  * github pages/jekyll
+  * webpack/browserify/other build tools
+  * html/css/javascript
+  * vue.js (possibly other javascript front-end frameworks like react)
+2. To showcase my skills/passions
+  * front end skills
+  * organizational skills
+  * passion for self learning
+3. To be a place to easily share my portfolio with other people
 
-You can find the source code for Jekyll at
-{% include icon-github.html username="jekyll" %} /
-[jekyll](https://github.com/jekyll/jekyll)
+Here's my github page: [max's github](www.github.com/maxpaulus43)
+Here's my email address: maxpaulus43@gmail.com 
