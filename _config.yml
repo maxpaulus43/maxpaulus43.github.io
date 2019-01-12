@@ -9,14 +9,13 @@
 title: Paulus Palace
 email: maxpaulus43@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  This is where I (Max Paulus) will keep all the things I wish to store in 
-  my mind palace. I know that this stuff is supposed to be stored
-  in my mind, but I keep it here as just in case.
-  The goal of this palace is to keep thoughts and ideas in a well-structured,
-  organized storage haven. One which I can also share with other people.
+  This is where Max keeps all the things he wishes to store in 
+  his mind palace. He know that this stuff is supposed to be stored
+  in his mind, but he keeps it here just in case.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://maxpaulus43.github.io" # the base hostname & protocol for your site
+url: "http://maxpaul.us" # the base hostname & protocol for your site
 github_username:  maxpaulus43
+permalink: /:categories/:year/:month/:day/:title:output_ext
 
 # Build settings
 markdown: kramdown
