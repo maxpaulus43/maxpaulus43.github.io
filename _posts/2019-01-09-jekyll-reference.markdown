@@ -2,6 +2,7 @@
 layout: post
 title:  "Jekyll Reference"
 date:   2019-01-09
+categories: [reference]
 ---
 
 ## Global Variables

@@ -6,9 +6,9 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 12 Jan 2019 15:55:13 -0800</pubDate>
-    <lastBuildDate>Sat, 12 Jan 2019 15:55:13 -0800</lastBuildDate>
-    <generator>Jekyll v3.4.5</generator>
+    <pubDate>Sat, 12 Jan 2019 16:55:14 -0800</pubDate>
+    <lastBuildDate>Sat, 12 Jan 2019 16:55:14 -0800</lastBuildDate>
+    <generator>Jekyll v3.7.4</generator>
     
       <item>
         <title>Principles of Stoicism</title>
@@ -101,9 +101,11 @@
 &lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll.&lt;/p&gt;
 </description>
         <pubDate>Wed, 09 Jan 2019 00:00:00 -0800</pubDate>
-        <link>http://localhost:4000/2019/01/09/jekyll-reference.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2019/01/09/jekyll-reference.html</guid>
+        <link>http://localhost:4000/reference/2019/01/09/jekyll-reference.html</link>
+        <guid isPermaLink="true">http://localhost:4000/reference/2019/01/09/jekyll-reference.html</guid>
         
+        
+        <category>reference</category>
         
       </item>
     
