@@ -19,3 +19,12 @@ permalink: /:categories/:year/:month/:day/:title:output_ext
 
 # Build settings
 markdown: kramdown
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - package.lock.json
+  - package.json
+  - webpack.config.js
+  - src
