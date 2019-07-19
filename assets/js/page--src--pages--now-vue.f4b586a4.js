@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[6],{227:function(t,n,e){"use strict";e.r(n);var i={metaInfo:{title:"Now"}},s=e(91),a=Object(s.a)(i,function(){var t=this.$createElement,n=this._self._c||t;return n("Layout",[n("h1",[this._v("What is Max up to now?")]),n("p",[this._v("Max is just chillin")])])},[],!1,null,null,null);n.default=a.exports}}]);
