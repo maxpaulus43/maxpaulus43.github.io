@@ -1,0 +1,16 @@
+---
+title: My very first blog post!
+author: Max Paulus
+date: 2019-07-18
+---
+
+# Here's my first blog post!
+
+* point a , b , c, d
+* point e, f, g, h
+
+```java
+public static void main (String[] args) {
+    System.out.println("hello world!");
+}
+```
