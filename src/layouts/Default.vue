@@ -1,16 +1,17 @@
 <template>
   <div class="layout">
     <header class="header">
-      <strong>
-        <g-link to="/">{{ $static.metaData.siteName }}</g-link>
-      </strong>
+      <g-link class="title-link" to="/">{{ $static.metaData.siteName }}</g-link>
+
       <nav class="nav">
         <g-link class="nav__link" to="/">Home</g-link>
-        <g-link class="nav__link" to="/about">About</g-link>
         <g-link class="nav__link" to="/blog">Blog</g-link>
+        <g-link class="nav__link" to="/about">About</g-link>
+        <g-link class="nav__link" to="/now">Now</g-link>
       </nav>
     </header>
     <slot/>
+    <footer class="footer"></footer>
   </div>
 </template>
 
@@ -28,13 +29,17 @@ body {
   margin:0;
   padding:0;
   line-height: 1.5;
+  display: flex;
+  justify-content: space-around;
 }
 
 .layout {
+  display: flex;
+  flex-direction: column;
   max-width: 760px;
-  margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
+  padding-top: 20px;
 }
 
 .header {
@@ -42,10 +47,37 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
-  height: 80px;
 }
 
-.nav__link {
-  margin-left: 20px;
+
+/* Medium screens */
+@media all and (max-width: 800px) {
+
+  .header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .title-link {
+    align-self: center;
+  }
+
+  .nav {
+    /* When on medium sized screens, we center it by evenly distributing empty space around items */
+    margin-top: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
 }
+
+/* Small screens */
+@media all and (max-width: 500px) {
+  .nav {
+    /* On small screens, we are no longer using row direction but column */
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 </style>

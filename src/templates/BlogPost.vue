@@ -2,7 +2,6 @@
   <Layout :title="$page.post.title">
     <div>{{$page.post.date}}</div>
     <div v-html="$page.post.content"/>
-    <div>by {{$page.post.author}}</div>
   </Layout>
 </template>
 
