@@ -1,15 +1,15 @@
 <template>
   <v-app>
-    <v-toolbar app scroll-off-screen :scroll-threshold="300" :color="color" dark>
+    <v-toolbar class="hidden-xs-only" scroll-off-screen :scroll-threshold="300" :color="color" dark>
 
-      <g-link to="/">
+      <g-link class="plain" to="/">
         <v-toolbar-title>{{ $static.metaData.siteName }}</v-toolbar-title>
       </g-link>
 
       <v-spacer></v-spacer>
 
-      <v-toolbar-items class="hidden-xs-only">
-        <g-link v-for="item in menuItems" :key="item.title" :to="item.path">
+      <v-toolbar-items >
+        <g-link class="plain" v-for="item in menuItems" :key="item.title" :to="item.path">
           <!-- hack to get style working with g-links -->
           <v-btn flat style="height: 100%">
             <v-icon left dark>{{ item.icon }}</v-icon>
@@ -69,13 +69,25 @@ export default {
 </script>
 
 <style>
-a,
-a:link,
-a:visited,
-a:hover,
-a:focus,
-a:active {
+a.plain,
+a.plain:link,
+a.plain:visited,
+a.plain:hover,
+a.plain:focus,
+a.plain:active {
   color: inherit;
   text-decoration: inherit;
+}
+
+.flex {
+  display: flex;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.dim {
+  opacity: 0.5;
 }
 </style>

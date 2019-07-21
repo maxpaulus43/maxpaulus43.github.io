@@ -1,4 +1,4 @@
-# The REAL source code for maxpaulus43.github.io
+# The source code for maxpaul.us
 
 ## Setup
 
@@ -11,6 +11,3 @@
 1. `gridsome develop` to start a local dev server at `http://localhost:8080`
 2. Happy coding 🎉🙌
 
-### 3. Once done developing, deploy to maxpaulus43.github.io master branch
-
-1. `npm run deploy`

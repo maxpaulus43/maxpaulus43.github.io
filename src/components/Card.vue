@@ -1,27 +1,27 @@
 <template >
-    <div class="card">
-        <slot/>
-    </div>
+  <div class="card">
+    <slot />
+  </div>
 </template>
 
 <script>
-export default {
-
-}
+export default {};
 </script>
 
 <style scoped>
 .card {
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     transition: transform .2s; /* Animation */
-    box-shadow: 0 2px 4px gray;
+    box-shadow: 0px 1px 3px gray;
     padding: 10px 15px;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     background-color: white;
 }
 
 .card:hover {
-    transform: scale(1.01);
+    box-shadow: 0px 2px 5px gray;
 }
+
 </style>

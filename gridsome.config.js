@@ -16,6 +16,13 @@ module.exports = {
         typeName: 'BlogPost',
         route: '/blog/:slug'
       }
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'now.md',
+        typeName: 'NowPost'
+      }
     }
   ],
   transformers: {
