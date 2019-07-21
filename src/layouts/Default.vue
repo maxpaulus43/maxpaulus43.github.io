@@ -1,18 +1,39 @@
 <template>
-  <div class="layout">
-    <header class="header">
-      <g-link class="title-link" to="/">{{ $static.metaData.siteName }}</g-link>
+  <v-app>
+    <v-toolbar app scroll-off-screen :scroll-threshold="300" :color="color" dark>
 
-      <nav class="nav">
-        <g-link class="nav__link" to="/">Home</g-link>
-        <g-link class="nav__link" to="/blog">Blog</g-link>
-        <g-link class="nav__link" to="/about">About</g-link>
-        <g-link class="nav__link" to="/now">Now</g-link>
-      </nav>
-    </header>
-    <slot/>
-    <footer class="footer"></footer>
-  </div>
+      <g-link to="/">
+        <v-toolbar-title>{{ $static.metaData.siteName }}</v-toolbar-title>
+      </g-link>
+
+      <v-spacer></v-spacer>
+
+      <v-toolbar-items class="hidden-xs-only">
+        <g-link v-for="item in menuItems" :key="item.title" :to="item.path">
+          <!-- hack to get style working with g-links -->
+          <v-btn flat style="height: 100%">
+            <v-icon left dark>{{ item.icon }}</v-icon>
+            {{ item.text }}
+          </v-btn>
+        </g-link>
+      </v-toolbar-items>
+    </v-toolbar>
+
+    <v-content>
+      <v-container>
+        <slot />
+      </v-container>
+    </v-content>
+
+    <v-card height="50px" class="hidden-sm-and-up" app>
+      <v-bottom-nav :value="true" fixed :color="color" dark>
+        <v-btn v-for="item in bottomBarItems" :key="item.title" :to="item.path" dark>
+          <span>{{item.text}}</span>
+          <v-icon>{{item.icon}}</v-icon>
+        </v-btn>
+      </v-bottom-nav>
+    </v-card>
+  </v-app>
 </template>
 
 <static-query>
@@ -23,61 +44,38 @@ query {
 }
 </static-query>
 
+<script>
+
+export default {
+  data: () => ({
+    drawer: null,
+    color: "teal darken-2",
+    menuItems: [
+      { text: "Blog", path: "/blog", icon: "import_contacts" },
+      { text: "Portfolio", path: "/#portfolio", icon: "folder" },
+      { text: "Now", path: "/now", icon: "alarm" },
+      { text: "Contact Me", path: "/#contact-me", icon: "phone" }
+    ],
+    bottomBarItems: [
+      { text: "Home", path: "/", icon: "home" },
+      { text: "Blog", path: "/blog", icon: "import_contacts" },
+      { text: "Now", path: "/now", icon: "alarm" }
+    ]
+  }),
+  props: {
+    source: String
+  }
+};
+</script>
+
 <style>
-body {
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-  margin:0;
-  padding:0;
-  line-height: 1.5;
-  display: flex;
-  justify-content: space-around;
+a,
+a:link,
+a:visited,
+a:hover,
+a:focus,
+a:active {
+  color: inherit;
+  text-decoration: inherit;
 }
-
-.layout {
-  display: flex;
-  flex-direction: column;
-  max-width: 760px;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 20px;
-}
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-
-/* Medium screens */
-@media all and (max-width: 800px) {
-
-  .header {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .title-link {
-    align-self: center;
-  }
-
-  .nav {
-    /* When on medium sized screens, we center it by evenly distributing empty space around items */
-    margin-top: 10px;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-  }
-}
-
-/* Small screens */
-@media all and (max-width: 500px) {
-  .nav {
-    /* On small screens, we are no longer using row direction but column */
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
 </style>

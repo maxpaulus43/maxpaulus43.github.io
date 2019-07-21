@@ -1,5 +1,5 @@
 <template>
-  <Layout :title="$page.post.title">
+  <Layout>
     <div>{{$page.post.date}}</div>
     <div v-html="$page.post.content"/>
   </Layout>
@@ -25,3 +25,7 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+
+</style>

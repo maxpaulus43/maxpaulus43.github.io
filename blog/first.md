@@ -2,6 +2,7 @@
 title: My very first blog post!
 author: Max Paulus
 date: 2019-07-18
+excerpt: One of the most interesting things about this is...
 ---
 
 # Here's my first blog post!
@@ -14,8 +15,6 @@ public static void main (String[] args) {
     System.out.println("hello world!");
 }
 ```
-
-
 
 ## Seriously one of the BEST!
 
