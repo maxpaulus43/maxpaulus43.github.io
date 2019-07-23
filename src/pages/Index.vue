@@ -1,14 +1,8 @@
 <template>
   <Layout>
-    <Card>
-      <Introduction id="introduction" />
-    </Card>
-    <Card>
-      <Portfolio id="portfolio" />
-    </Card>
-    <Card>
-      <ContactMe id="contact-me" />
-    </Card>
+    <Introduction id="introduction" />
+    <Portfolio id="portfolio" />
+    <ContactMe id="contact-me" />
   </Layout>
 </template>
 
@@ -16,7 +10,6 @@
 import Introduction from "~/components/Introduction.vue";
 import Portfolio from "~/components/Portfolio.vue";
 import ContactMe from "~/components/ContactMe.vue";
-import Card from "~/components/Card.vue";
 
 export default {
   metaInfo: {
@@ -26,10 +19,7 @@ export default {
     Introduction,
     Portfolio,
     ContactMe,
-    Card
   }
 };
 </script>
 
-<style scoped>
-</style>

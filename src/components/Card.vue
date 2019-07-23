@@ -1,14 +1,33 @@
 <template >
   <div class="card">
-    <slot />
+    <g-link v-if="to" :to="to">
+      <slot />
+    </g-link>
+    
+    <slot v-else/>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    to: String
+  }
+};
 </script>
 
 <style scoped>
+
+.card > a,
+.card > a:link,
+.card > a:visited,
+.card > a:hover,
+.card > a:focus,
+.card > a:active {
+  color: inherit;
+  text-decoration: inherit;
+}
+
 .card {
     display: flex;
     flex-direction: column;
