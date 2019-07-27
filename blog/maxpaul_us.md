@@ -1,7 +1,8 @@
 ---
 author: Max Paulus
 date: 2019-07-21
-excerpt: This website is long overdue, and should have...
+excerpt: This website is long overdue, and should have…
+tags: ['programming', 'vue', 'frontend']
 ---
 
 # maxpaul.us Is Born!
