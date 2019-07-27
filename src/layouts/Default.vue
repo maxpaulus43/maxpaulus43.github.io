@@ -2,7 +2,7 @@
   <div class="pb-6">
     <header>
       <nav
-        class="navbar fixed bottom-0 left-0 right-0 pl-5 pr-5 pt-5 h-16 flex justify-between bg-white shadow md:shadow-none md:relative"
+        class="navbar fixed bottom-0 left-0 right-0 pl-5 pr-5 pt-5 h-16 flex justify-between bg-white shadow-navbar md:shadow-none md:relative"
       >
         <g-link
           v-for="navItem in navItems"

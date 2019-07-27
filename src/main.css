@@ -20,13 +20,6 @@ h3 {
   @apply text-lg;
 }
 
-@media (max-width:768) {
-  .sm-hidden {
-    display: none;
-  }
-}
-
-
 /*
 sm = 640
 md = 768
