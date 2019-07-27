@@ -1,5 +1,4 @@
 ---
-title: Principles of Stoicism
 author: Max Paulus
 date: 2019-01-12
 excerpt: The following principles will be your solace in times of struggle. Practice these every day in order to...

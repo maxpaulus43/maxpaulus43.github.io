@@ -6,7 +6,7 @@
     </div>
     <div id="popup-menu" v-if="showMenu" class="shadow">
       <g-link v-for="item in items" :key="item.text" :to="item.path">
-        <div class="p-3 hover:bg-gray-300" @click="toggleShowMenu"><i :class="item.icon"></i> {{item.text}}</div>
+        <div class="p-3 hover:bg-gray-300" @click="toggleShowMenu"><i class="fa" :class="item.icon"></i> {{item.text}}</div>
       </g-link>
     </div>
   </div>

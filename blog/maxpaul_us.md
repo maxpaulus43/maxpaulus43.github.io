@@ -1,5 +1,4 @@
 ---
-title: maxpaul.us is born!
 author: Max Paulus
 date: 2019-07-21
 excerpt: This website is long overdue, and should have...

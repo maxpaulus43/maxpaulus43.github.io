@@ -1,19 +1,19 @@
 <template>
-  <div class="pb-6">
+  <div class="pb-20">
     <header>
       <nav
-        class="navbar fixed bottom-0 left-0 right-0 pl-5 pr-5 pt-5 h-16 flex justify-between bg-white shadow-navbar md:shadow-none md:relative"
+        class="navbar fixed bottom-0 left-0 right-0 pl-5 pr-5 h-16 flex justify-between bg-white shadow-navbar md:shadow-none md:relative"
       >
         <g-link
           v-for="navItem in navItems"
           :key="navItem.text"
           :to="navItem.path"
           :class="{'hidden md:block' : navItem.overflow}"
+          class="pt-5"
         >
-          <i :class="navItem.icon"></i>
-          <span>{{navItem.text}}</span>
+          <i class="fa" :class="navItem.icon"></i> {{navItem.text}}
         </g-link>
-        <g-link class="md:hidden">
+        <g-link class="pt-5 md:hidden">
           <MoreButton :items="overflowItems" />
         </g-link>
       </nav>
@@ -46,19 +46,19 @@ export default {
     drawer: null,
     color: "teal darken-2",
     navItems: [
-      { text: "Home", path: "/", icon: "fa fa-home" },
-      { text: "Blog", path: "/blog", icon: "fa fa-book" },
+      { text: "Home", path: "/", icon: "fa-home" },
+      { text: "Blog", path: "/blog", icon: "fa-book" },
       {
         text: "Portfolio",
         path: "/#portfolio",
         icon: "fa fa-folder-open",
         overflow: true
       },
-      { text: "Now", path: "/now", icon: "fa fa-clock" },
+      { text: "Now", path: "/now", icon: "fa-clock" },
       {
         text: "Contact Me",
         path: "/#contact-me",
-        icon: "fa fa-phone",
+        icon: "fa-phone",
         overflow: true
       }
     ]
