@@ -28,11 +28,12 @@
         </nav>
     </header>
 
-    <main>
+    <main class="px-3">
       <slot />
     </main>
 
     <footer>
+      
     </footer>
   </div>
 </template>
@@ -73,11 +74,4 @@ export default {
 };
 </script>
 
-<style >
-#app {
-  font-family: "Barlow";
-  font-size: 1.2em;
-  max-width: 768px;
-  margin: auto;
-}
-</style>
+<style src="../main.css" />

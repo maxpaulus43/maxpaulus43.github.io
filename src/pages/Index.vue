@@ -1,8 +1,8 @@
 <template>
   <Layout>
-    <Introduction id="introduction" />
-    <Portfolio id="portfolio" />
-    <ContactMe id="contact-me" />
+    <Introduction id="introduction" class="mb-3"/>
+    <Portfolio id="portfolio" class="mb-3"/>
+    <ContactMe id="contact-me" class="mb-3"/>
   </Layout>
 </template>
 

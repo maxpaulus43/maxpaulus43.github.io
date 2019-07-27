@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <span class="text-gray-600">last updated on {{$page.now.date}}</span>
+    <span class="text-gray-600 ml-1">last updated on {{$page.now.date}}</span>
     <div class="markdown">
       <div v-html="$page.now.content" />
     </div>

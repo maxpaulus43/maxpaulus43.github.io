@@ -1,69 +1,55 @@
 <template>
   <div>
     <h2>Contact Me</h2>
-    <!-- <form
-      action="https://formspree.io/maxpaulus43@gmail.com"
-      method="POST"
-      class="contact-me-form flex column"
-    >
-      <div class="form-row flex column">
-        <label for="name">Your Name:</label>
-        <input type="text" name="name" placeholder="Sweet Name!" required />
-      </div>
 
-      <div class="form-row flex column">
-        <label for="message">Your Message:</label>
-        <textarea
-          name="message"
-          id="contact-me-message"
-          cols="30"
-          rows="5"
-          placeholder="I'll get back to you as soon as I can!"
-          required
-        />
+    <form action="https://formspree.io/maxpaulus43@gmail.com" method="POST">
+      <div class="md:flex md:justify-start md:items-center mb-3">
+        <div class="md:w-1/6">
+          <label
+            class="block font-bold md:text-right mb-1 md:mb-0 pr-4"
+            for="inline-full-name"
+          >Full Name</label>
+        </div>
+        <div class="md:w-2/3">
+          <input
+            class="border-2 w-full py-2 px-4 leading-tight focus:outline-none focus:border-green-300"
+            type="text"
+            name="name"
+            required
+          />
+        </div>
       </div>
-      <button class="send-button">Contact Max</button>
-    </form> -->
-
-    <form class="w-full max-w-sm">
-  <div class="md:flex md:items-center mb-6">
-    <div class="md:w-1/3">
-      <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-full-name">
-        Full Name
-      </label>
-    </div>
-    <div class="md:w-2/3">
-      <input class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-full-name" type="text" value="Jane Doe">
-    </div>
-  </div>
-  <div class="md:flex md:items-center mb-6">
-    <div class="md:w-1/3">
-      <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-username">
-        Password
-      </label>
-    </div>
-    <div class="md:w-2/3">
-      <input class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-username" type="password" placeholder="******************">
-    </div>
-  </div>
-  <div class="md:flex md:items-center mb-6">
-    <div class="md:w-1/3"></div>
-    <label class="md:w-2/3 block text-gray-500 font-bold">
-      <input class="mr-2 leading-tight" type="checkbox">
-      <span class="text-sm">
-        Send me your newsletter!
-      </span>
-    </label>
-  </div>
-  <div class="md:flex md:items-center">
-    <div class="md:w-1/3"></div>
-    <div class="md:w-2/3">
-      <button class="shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="button">
-        Sign Up
-      </button>
-    </div>
-  </div>
-</form>
+      <div class="md:flex md:items-start mb-3">
+        <div class="md:w-1/6">
+          <label
+            class="block font-bold md:text-right mb-1 md:mb-0 pr-4"
+            for="inline-username"
+          >Message</label>
+        </div>
+        <div class="md:w-2/3">
+          <textarea
+            class="border-2 w-full p-1 focus:outline-none focus:border-green-300"
+            name="message"
+            id="message"
+            cols="30"
+            rows="5"
+            required
+          ></textarea>
+        </div>
+      </div>
+      <div class="md:flex md:justify-center">
+        <div></div>
+        <div class="md:w-2/3">
+          <button
+            class="shadow bg-green-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4"
+            type="submit"
+          >
+            Send
+            <i class="fa fa-paper-plane"></i>
+          </button>
+        </div>
+      </div>
+    </form>
   </div>
 </template>
 
