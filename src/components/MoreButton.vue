@@ -5,26 +5,26 @@
       <span>{{text}}</span>
     </div>
     <div id="popup-menu" v-if="showMenu" class="shadow">
-      <div class="p-3 hover:bg-gray-300" v-for="item in items" :key="item.text" @click="toggleShowMenu"><g-link :to="item.path">{{item.text}}</g-link></div>
+      <g-link v-for="item in items" :key="item.text" :to="item.path">
+        <div class="p-3 hover:bg-gray-300" @click="toggleShowMenu"><i :class="item.icon"></i> {{item.text}}</div>
+      </g-link>
     </div>
   </div>
 </template>
 
 <script>
-
-
 export default {
   props: {
     items: Array
   },
   data() {
     return {
-      showMenu: false,
+      showMenu: false
     };
   },
   methods: {
     toggleShowMenu() {
-      this.showMenu = !this.showMenu
+      this.showMenu = !this.showMenu;
     }
   },
   computed: {
@@ -41,7 +41,7 @@ export default {
   min-width: 200px;
   background-color: white;
   bottom: 48px;
-  right:-20px;
+  right: -20px;
   z-index: 1;
 }
 </style>

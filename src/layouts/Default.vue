@@ -2,25 +2,9 @@
   <div>
     <header>
         <nav class="fixed bottom-0 left-0 right-0 pl-5 pr-5 pt-5 h-16 flex justify-between bg-white shadow md:shadow-none md:relative">
-          <g-link to="/">
-            <i class="fa fa-home"></i>
-            <span> Home</span>
-          </g-link>
-          <g-link to="/blog">
-            <i class="fa fa-book"></i>
-            <span> Blog</span>
-          </g-link>
-          <g-link to="/#portfolio" class="hidden md:block">
-            <i class="fa fa-folder-open"></i>
-            <span> Portfolio</span>
-          </g-link>
-          <g-link to="/#contact-me" class="hidden md:block">
-            <i class="fa fa-phone"></i>
-            <span> Contact</span>
-          </g-link>
-          <g-link to="/now">
-            <i class="fa fa-clock"></i>
-            <span> Now</span>
+          <g-link v-for="navItem in navItems" :key="navItem.text" :to="navItem.path" :class="{'hidden md:block' : navItem.overflow}">
+            <i :class="navItem.icon"></i>
+            <span> {{navItem.text}}</span>
           </g-link>
           <g-link class="md:hidden">
             <MoreButton :items="overflowItems"/>
@@ -56,16 +40,17 @@ export default {
   data: () => ({
     drawer: null,
     color: "teal darken-2",
-    items: [
-      { text: "Blog", path: "/blog", icon: "import_contacts" },
-      { text: "Portfolio", path: "/#portfolio", icon: "folder", overflow: true },
-      { text: "Now", path: "/now", icon: "alarm" },
-      { text: "Contact Me", path: "/#contact-me", icon: "phone", overflow: true }
+    navItems: [
+      { text: "Home", path: "/", icon: "fa fa-home" },
+      { text: "Blog", path: "/blog", icon: "fa fa-book" },
+      { text: "Portfolio", path: "/#portfolio", icon: "fa fa-folder-open", overflow: true },
+      { text: "Now", path: "/now", icon: "fa fa-clock" },
+      { text: "Contact Me", path: "/#contact-me", icon: "fa fa-phone", overflow: true }
     ]
   }),
   computed: {
     overflowItems() {
-      return this.items.filter(item => item.overflow);
+      return this.navItems.filter(item => item.overflow);
     }
   },
   props: {

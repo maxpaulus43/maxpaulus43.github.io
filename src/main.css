@@ -3,7 +3,7 @@
   font-size: 1.2em;
   max-width: 768px;
   margin: auto;
-  padding-bottom:5em;
+  margin-bottom: 6em;
 }
 
 h1,h2,h3 {
@@ -19,3 +19,17 @@ h2 {
 h3 {
   @apply text-lg;
 }
+
+@media (max-width:768) {
+  .sm-hidden {
+    display: none;
+  }
+}
+
+
+/*
+sm = 640
+md = 768
+lg = 1024
+xl = 1280
+*/
