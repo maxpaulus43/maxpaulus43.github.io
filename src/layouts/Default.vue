@@ -1,24 +1,29 @@
 <template>
-  <div>
+  <div class="pb-6">
     <header>
-        <nav class="fixed bottom-0 left-0 right-0 pl-5 pr-5 pt-5 h-16 flex justify-between bg-white shadow md:shadow-none md:relative">
-          <g-link v-for="navItem in navItems" :key="navItem.text" :to="navItem.path" :class="{'hidden md:block' : navItem.overflow}">
-            <i :class="navItem.icon"></i>
-            <span> {{navItem.text}}</span>
-          </g-link>
-          <g-link class="md:hidden">
-            <MoreButton :items="overflowItems"/>
-          </g-link>
-        </nav>
+      <nav
+        class="navbar fixed bottom-0 left-0 right-0 pl-5 pr-5 pt-5 h-16 flex justify-between bg-white shadow md:shadow-none md:relative"
+      >
+        <g-link
+          v-for="navItem in navItems"
+          :key="navItem.text"
+          :to="navItem.path"
+          :class="{'hidden md:block' : navItem.overflow}"
+        >
+          <i :class="navItem.icon"></i>
+          <span>{{navItem.text}}</span>
+        </g-link>
+        <g-link class="md:hidden">
+          <MoreButton :items="overflowItems" />
+        </g-link>
+      </nav>
     </header>
 
     <main class="px-3">
       <slot />
     </main>
 
-    <footer>
-      
-    </footer>
+    <footer></footer>
   </div>
 </template>
 
@@ -31,7 +36,7 @@ query {
 </static-query>
 
 <script>
-import MoreButton from '~/components/MoreButton.vue'
+import MoreButton from "~/components/MoreButton.vue";
 
 export default {
   components: {
@@ -43,9 +48,19 @@ export default {
     navItems: [
       { text: "Home", path: "/", icon: "fa fa-home" },
       { text: "Blog", path: "/blog", icon: "fa fa-book" },
-      { text: "Portfolio", path: "/#portfolio", icon: "fa fa-folder-open", overflow: true },
+      {
+        text: "Portfolio",
+        path: "/#portfolio",
+        icon: "fa fa-folder-open",
+        overflow: true
+      },
       { text: "Now", path: "/now", icon: "fa fa-clock" },
-      { text: "Contact Me", path: "/#contact-me", icon: "fa fa-phone", overflow: true }
+      {
+        text: "Contact Me",
+        path: "/#contact-me",
+        icon: "fa fa-phone",
+        overflow: true
+      }
     ]
   }),
   computed: {
