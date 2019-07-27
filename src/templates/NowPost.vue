@@ -1,7 +1,9 @@
 <template>
   <Layout>
-    <span class="dim">last updated on {{$page.now.date}}</span>
-    <div v-html="$page.now.content" />
+    <span class="text-gray-600">last updated on {{$page.now.date}}</span>
+    <div class="markdown">
+      <div v-html="$page.now.content" />
+    </div>
   </Layout>
 </template>
 
@@ -23,3 +25,5 @@ export default {
   }
 };
 </script>
+
+<style scoped src="../markdown.css">

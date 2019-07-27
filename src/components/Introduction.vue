@@ -17,23 +17,3 @@ export default {
 
 }
 </script>
-
-<style scoped>
-.intro {
-    display: flex;
-    align-items: center;
-}
-
-.profile-image {
-    border-radius: 50%;
-    box-shadow: 2px 2px 4 gray;
-}
-
-@media all and (max-width: 500px) {
-    .intro {
-        display: flex;
-        flex-flow: column nowrap;
-    }
-}
-
-</style>

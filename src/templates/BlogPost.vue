@@ -1,7 +1,9 @@
 <template>
   <Layout>
-    <div>{{$page.post.date}}</div>
-    <div v-html="$page.post.content"/>
+    <div class="markdown">
+      <div>{{$page.post.date}}</div>
+      <div v-html="$page.post.content" />
+    </div>
   </Layout>
 </template>
 
@@ -18,14 +20,12 @@ query Post ($id: String!) {
 
 <script>
 export default {
-  metaInfo () {
+  metaInfo() {
     return {
       title: this.$page.post.title
-    }
+    };
   }
-}
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped src="../markdown.css">

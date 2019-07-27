@@ -1,11 +1,12 @@
 <template>
-  <div>
-    <div>
+  <div class="relative">
+    <div @click="toggleShowMenu">
       <i class="fa fa-ellipsis-v"></i>
-      <span>More</span>
+      <span>{{text}}</span>
     </div>
-
-
+    <div id="popup-menu" v-if="showMenu" class="shadow">
+      <div class="p-3 hover:bg-gray-300" v-for="item in items" :key="item.text" @click="toggleShowMenu"><g-link :to="item.path">{{item.text}}</g-link></div>
+    </div>
   </div>
 </template>
 
@@ -13,19 +14,34 @@
 
 
 export default {
-  components: {
-
+  props: {
+    items: Array
   },
   data() {
     return {
-
+      showMenu: false,
     };
   },
   methods: {
-
+    toggleShowMenu() {
+      this.showMenu = !this.showMenu
+    }
+  },
+  computed: {
+    text() {
+      return this.showMenu ? "Less" : "More";
+    }
   }
 };
 </script>
 
-<style >
+<style scoped>
+#popup-menu {
+  position: absolute;
+  min-width: 200px;
+  background-color: white;
+  bottom: 48px;
+  right:-20px;
+  z-index: 1;
+}
 </style>

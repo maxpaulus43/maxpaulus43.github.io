@@ -23,12 +23,15 @@ module.exports = {
         path: 'now.md',
         typeName: 'NowPost'
       }
+    },
+    {
+      use: 'gridsome-plugin-tailwindcss'
     }
   ],
   transformers: {
     remark: {
       plugins: [
-        '@gridsome/remark-prismjs'
+        [ 'gridsome-plugin-remark-shiki', { theme: 'Material-Theme-Palenight', skipInline: true } ]
       ]
     }
   }
