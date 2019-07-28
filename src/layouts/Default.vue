@@ -1,5 +1,5 @@
 <template>
-  <div class="pb-20">
+  <div class="pb-20 text-xl max-w-4xl m-auto">
     <header>
       <nav
         class="navbar fixed bottom-0 left-0 right-0 pl-5 pr-5 h-16 flex justify-between bg-white shadow-navbar md:shadow-none md:relative"

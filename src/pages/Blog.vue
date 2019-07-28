@@ -11,7 +11,7 @@
       <g-link v-for="edge in $page.blogPosts.edges" :key="edge.node.id" :to="edge.node.path">
         <div class="shadow p-3 hover:shadow-lg">
           <div class>
-            <div class="font-bold text-xl">{{edge.node.title}}</div>
+            <h3 class="text-xl">{{edge.node.title}}</h3>
             <p class="text-gray-700 text-base">{{edge.node.excerpt}}</p>
             <p class="text-gray-400 text-sm">{{edge.node.date}}</p>
           </div>

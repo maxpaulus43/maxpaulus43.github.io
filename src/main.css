@@ -1,8 +1,5 @@
-#app {
+body {
   font-family: "Barlow";
-  font-size: 1.2em;
-  max-width: 768px;
-  margin: auto;
 }
 
 h1,h2,h3 {
