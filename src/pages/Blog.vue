@@ -1,5 +1,12 @@
 <template>
   <Layout>
+    <Pager
+      v-if="$page.blogPosts.edges.length >= 10"
+      class="w-full flex justify-center my-2"
+      :info="$page.blogPosts.pageInfo"
+      linkClass="px-3 hover:bg-gray-400"
+    />
+
     <div class="flex flex-col">
       <g-link v-for="edge in $page.blogPosts.edges" :key="edge.node.id" :to="edge.node.path">
         <div class="shadow p-3 hover:shadow-lg">
@@ -18,11 +25,22 @@
         </div>
       </g-link>
     </div>
+
+    <Pager
+      class="w-full flex justify-center my-2"
+      :info="$page.blogPosts.pageInfo"
+      linkClass="px-3 hover:bg-gray-400"
+    />
   </Layout>
 </template>
 
 <script>
+import { Pager } from "gridsome";
+
 export default {
+  components: {
+    Pager
+  },
   data() {
     return {
       tags: [
@@ -39,8 +57,12 @@ export default {
 </script>
 
 <page-query>
-query BlogPosts {
-  blogPosts: allBlogPost {
+query BlogPosts($page: Int) {
+  blogPosts: allBlogPost(perPage: 10, page: $page) @paginate  {
+    pageInfo {
+      totalPages
+      currentPage
+    }
     edges {
       node {
         id

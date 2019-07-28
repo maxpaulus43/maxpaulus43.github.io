@@ -2,8 +2,7 @@
   <div>
     <h2>Contact Me</h2>
 
- <!-- action="https://formspree.io/maxpaulus43@gmail.com"  -->
-    <form name="contact-me" method="POST" data-netlify="true">
+    <form action="https://formspree.io/maxpaulus43@gmail.com" method="POST">
       <div class="md:flex md:justify-start md:items-center mb-3">
         <div class="md:w-1/6">
           <label
