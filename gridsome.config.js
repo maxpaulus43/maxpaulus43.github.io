@@ -33,12 +33,18 @@ module.exports = {
     },
     {
       use: 'gridsome-plugin-tailwindcss'
+    },
+    {
+      use: '@gridsome/plugin-google-analytics',
+      options: {
+        id: process.env.G_TRACKING_ID
+      }
     }
   ],
   transformers: {
     remark: {
       plugins: [
-        [ 'gridsome-plugin-remark-shiki', { theme: 'Material-Theme-Palenight', skipInline: true } ]
+        ['gridsome-plugin-remark-shiki', { theme: 'Material-Theme-Palenight', skipInline: true }]
       ]
     }
   }
