@@ -1,0 +1,56 @@
+[
+    {
+        "title": "Zeitgeist",
+        "path": "/portfolio/zeitgeist",
+        "summary": "Zeitgeist is a google chrome extension to...",
+        "skills": [
+            "vuejs",
+            "html",
+            "css",
+            "aws",
+            "aws-developer-tools",
+            "aws-dynamo-db",
+            "ci-cd",
+            "git"
+        ]
+    },
+    {
+        "title": "maxpaul.us",
+        "path": "/portfolio/maxpaul_us",
+        "summary": "This very website! I have...",
+        "skills": [
+            "vuejs",
+            "tailwind-css",
+            "html",
+            "netlify",
+            "ci-cd",
+            "git"
+        ]
+    },
+    {
+        "title": "Aerserv/Inmobi (various projects)",
+        "path": "/portfolio/aerserv",
+        "summary": "Aerserv blah blah...",
+        "skills": [
+            "java",
+            "tomcat",
+            "spring",
+            "ruby",
+            "rails",
+            "jira",
+            ""
+        ]
+    },
+    {
+        "title": "Amazon (various projects)",
+        "path": "/portfolio/amazon",
+        "summary": "Amazon is this and that and ...",
+        "skills": [
+            "android",
+            "ios",
+            "objective-c",
+            "react native",
+            "ci-cd"
+        ]
+    }
+]
