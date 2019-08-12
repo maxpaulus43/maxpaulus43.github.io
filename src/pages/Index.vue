@@ -1,14 +1,12 @@
 <template>
   <Layout>
     <Introduction id="introduction" class="mb-3"/>
-    <Portfolio id="portfolio" class="mb-3"/>
     <ContactMe id="contact-me" class="mb-3"/>
   </Layout>
 </template>
 
 <script>
 import Introduction from "~/components/Introduction.vue";
-import Portfolio from "~/components/Portfolio.vue";
 import ContactMe from "~/components/ContactMe.vue";
 
 export default {
@@ -17,8 +15,7 @@ export default {
   },
   components: {
     Introduction,
-    Portfolio,
-    ContactMe,
+    ContactMe
   }
 };
 </script>

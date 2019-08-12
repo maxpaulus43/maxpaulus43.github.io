@@ -9,5 +9,4 @@ export default function (Vue, { router, head, isClient }) {
 
   head.link.push({ rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Barlow|Oswald&display=swap' })
   head.link.push({ rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css' })
-  head.link.push({rel: `stylesheet${process.env.G_TRACKING_ID}`, href: ''})
 }

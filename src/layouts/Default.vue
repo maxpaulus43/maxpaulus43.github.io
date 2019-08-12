@@ -2,18 +2,19 @@
   <div class="pb-20 text-xl max-w-4xl m-auto">
     <header>
       <nav
-        class="navbar fixed bottom-0 left-0 right-0 pl-5 pr-5 h-16 flex justify-between bg-white shadow-navbar md:shadow-none md:relative"
+        class="navbar fixed bottom-0 left-0 right-0 pl-5 pr-5 h-12 flex justify-between bg-white shadow-navbar md:shadow-none md:relative"
       >
         <g-link
           v-for="navItem in navItems"
           :key="navItem.text"
           :to="navItem.path"
           :class="{'hidden md:block' : navItem.overflow}"
-          class="pt-5"
+          class="pt-2"
         >
-          <i class="fa" :class="navItem.icon"></i> {{navItem.text}}
+          <i class="fa" :class="navItem.icon"></i>
+          {{navItem.text}}
         </g-link>
-        <g-link class="pt-5 md:hidden">
+        <g-link class="pt-2 md:hidden">
           <MoreButton :items="overflowItems" />
         </g-link>
       </nav>
@@ -47,14 +48,19 @@ export default {
     color: "teal darken-2",
     navItems: [
       { text: "Home", path: "/", icon: "fa-home" },
-      { text: "Blog", path: "/blog", icon: "fa-book" },
       {
-        text: "Portfolio",
-        path: "/#portfolio",
-        icon: "fa fa-folder-open",
+        text: "Work",
+        path: "/portfolio",
+        icon: "fa fa-folder-open"
+      },
+      { text: "Blog", path: "/blog", icon: "fa-book" },
+      { text: "Now", path: "/now", icon: "fa-clock", overflow: true },
+      {
+        text: "Sketches",
+        path: "/sketches",
+        icon: "fa-image",
         overflow: true
       },
-      { text: "Now", path: "/now", icon: "fa-clock" },
       {
         text: "Contact Me",
         path: "/#contact-me",

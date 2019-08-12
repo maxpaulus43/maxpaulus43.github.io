@@ -7,14 +7,30 @@
         <div class="md:w-1/6">
           <label
             class="block font-bold md:text-right mb-1 md:mb-0 pr-4"
-            for="inline-full-name"
+            for="name"
           >Full Name</label>
         </div>
-        <div class="md:w-2/3">
+        <div class="md:w-5/6">
           <input
             class="border-2 w-full py-2 px-4 leading-tight focus:outline-none focus:border-green-300"
             type="text"
             name="name"
+            required
+          />
+        </div>
+      </div>
+      <div class="md:flex md:justify-start md:items-center mb-3">
+        <div class="md:w-1/6">
+          <label
+            class="block font-bold md:text-right mb-1 md:mb-0 pr-4"
+            for="email"
+          >Email</label>
+        </div>
+        <div class="md:w-5/6">
+          <input
+            class="border-2 w-full py-2 px-4 leading-tight focus:outline-none focus:border-green-300"
+            type="email"
+            name="email"
             required
           />
         </div>
@@ -26,7 +42,7 @@
             for="inline-username"
           >Message</label>
         </div>
-        <div class="md:w-2/3">
+        <div class="md:w-5/6">
           <textarea
             class="border-2 w-full p-1 focus:outline-none focus:border-green-300"
             name="message"

@@ -37,11 +37,9 @@ export default {
 
 <style scoped>
 #popup-menu {
-  position: absolute;
+  @apply absolute bg-white z-10;
   min-width: 200px;
-  background-color: white;
-  bottom: 48px;
+  bottom: 38px;
   right: -20px;
-  z-index: 1;
 }
 </style>

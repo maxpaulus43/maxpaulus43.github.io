@@ -11,7 +11,7 @@ tags: ['psychology','tv']
 
 ![genius_diagram](./images/genius_diagram.png)
 
- The situation in episode five was this: two losing players faced off against eachother in a death match game. Each "death-matcher" had to play rock/paper/scissors exactly once with every other player in a stream of games. The object of the death match game was to have the longest r/p/s. win streak. I want to talk about some of the behaviors I noticed throughout this death match game and how they can be help explain 3 human behaviors more generally: humans are selfish, humans remember feelings more than actions, and ultimately humans forgive. 
+ The situation in episode five was this: two losing players faced off against eachother in a death match game. Each "death-matcher" had to play rock/paper/scissors exactly once with every other player in a stream of games. The object of the death match game was to have the longest r/p/s. win streak. I want to talk about some of the behaviors I noticed throughout this death match game and how they can help explain 3 human behaviors more generally: humans are selfish, humans remember feelings more than actions, and ultimately humans forgive. 
 
 ## Humans Are Selfish
 

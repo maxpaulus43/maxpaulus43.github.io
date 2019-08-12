@@ -1,5 +1,5 @@
 body {
-  font-family: "Barlow";
+  font-family:  "Barlow";
 }
 
 h1,h2,h3 {
@@ -16,6 +16,20 @@ h3 {
   @apply text-lg;
 }
 
+.link {
+  @apply bg-gray-300;
+}
+
+.link:hover {
+  @apply bg-gray-400;
+}
+
+@media screen and (max-width:368px) {
+  nav a {
+    @apply text-sm;
+    @apply mt-1;
+  }
+}
 /*
 sm = 640
 md = 768

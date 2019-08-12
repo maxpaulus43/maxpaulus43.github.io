@@ -32,12 +32,27 @@ module.exports = {
       }
     },
     {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'portfolio/*.md',
+        typeName: 'Project',
+        route: '/portfolio/:slug',
+        refs: {
+          skills: {
+            typeName: 'Skill',
+            route: 'skill/:id',
+            create: true
+          }
+        }
+      }
+    },
+    {
       use: 'gridsome-plugin-tailwindcss'
     },
     {
       use: '@gridsome/plugin-google-analytics',
       options: {
-        id: process.env.G_TRACKING_ID
+        id: process.env.NODE_ENV === 'production' ? process.env.G_TRACKING_ID : "none"
       }
     }
   ],
