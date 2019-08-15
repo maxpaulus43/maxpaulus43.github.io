@@ -56,12 +56,6 @@ export default {
       { text: "Blog", path: "/blog", icon: "fa-book" },
       { text: "Now", path: "/now", icon: "fa-clock", overflow: true },
       {
-        text: "Sketches",
-        path: "/sketches",
-        icon: "fa-image",
-        overflow: true
-      },
-      {
         text: "Contact Me",
         path: "/#contact-me",
         icon: "fa-phone",

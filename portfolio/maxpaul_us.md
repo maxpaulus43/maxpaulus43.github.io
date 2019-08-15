@@ -6,4 +6,4 @@ skills: ['vuejs', 'gridsome', 'netlify', 'ci-cd']
 
 ## This Very Website
 
-This is the very website which I just made a few weeks ago.
+This is the very website which I just made a few weeks ago! 

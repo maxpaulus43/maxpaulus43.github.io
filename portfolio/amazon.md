@@ -1,12 +1,10 @@
 ---
 title: Amazon
-excerpt: I'm sure you know what and who Amazon is.
+excerpt: Amazon is a global retail company for whom I worked on their mobile shopping application.
 skills: ['ruby', 'ci-cd', 'react-native', 'android', 'ios']
 ---
 
 ![amazon](./images/amazonlogo.jpg)
-
-
 
 # Amazon
 

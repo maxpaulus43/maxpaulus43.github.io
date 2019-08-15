@@ -1,20 +1,16 @@
 ---
-date: 2019-07-23
+date: 2019-08-13
 ---
 
 # What is Max Up To Now?
 
-Right now, I'm working on this very website! I'm having a ton of fun learning about [gridsome](https://gridsome.org/), [vue](https://vuejs.org/), [netflify](https://www.netlify.com/), [static site generators](https://www.staticgen.com/), and front end frameworks!
+Right now, I'm working on this very website. So far what's interested me the most about the whole process is messing with the *style* of the website. One of my requirements for this site is that it has to show off my style. As you can see, I consider myself a pretty simplistic and plain guy. But as I like to say: Simple is smooth, and smooth is *fast*. I love it when the site navigates like a native program. Plus, i've spent way too much time browsing [google fonts](https://fonts.google.com/).
 
-It feels nice to be able to work on something for my own personal joy. With no deadlines to miss, no budgets to break, and some delicious macaroni and cheese by my side, I've been basking in the land of modern frontend. An additional (and planned) nice benefit is that I can totally show off this website to anyone I want!
+I've started practicing piano every few days. I used to practice every day but it was too much to keep up with. I find that holding myself up to an unnecessarily high standard is a sure-fire way to destroy my motivation. I'm following along with [alfred's adult all-in-one course](https://www.amazon.com/Adult-All-One-Course-Lesson-Theory-Technic/dp/0882848186/ref=asc_df_0882848186/?tag=hyprod-20&linkCode=df0&hvadid=312166025508&hvpos=1o1&hvnetw=g&hvrand=1530509695768693991&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9031939&hvtargid=pla-332970365722&psc=1). RIght now I'm almost finished with [At Last by Etta James](https://www.youtube.com/watch?v=plLs66yTtn8&list=PLT4QnIqosnSbYTb3A92hKeruKaF4K7wBd&index=64)
 
-I've also been working on [ZeitGeist](https://github.com/ZeitgeistOrg), which is a small google chrome extension to figure out what other people are thinking. This has also been fulfilling to work on as well. I'm really really enjoying using vue as a frontend framework. I'm taking this project as an opportunity to learn about the [AWS Developer tools](https://aws.amazon.com/products/developer-tools/). A little automation is enough to make me giddy.
+I'm listening to [Treasure Island](https://www.audible.com/pd/Treasure-Island-Audiobook/B072MLGY5S). It's not the exact book, but instead it's a dramatized version. It's like an audio play. I'm REALLY enjoying it on my walks around the city. If anyone knows of other audio plays like it please [contact me](/#contact-me).
 
-I'm reading [Designing Your Life](https://designingyour.life/the-book/) by Bill Burnett and Dave Evans. I like how instead of talking around self-help, the authors give concrete exercises to complete and prototype (prototyping is very important). 
+I'm currently living in San Francisco. The weather is a delicious 72 degrees and I'm so happy that I don't have to drag my sweater around everywhere. 
 
-I'm listening to [Grit](https://angeladuckworth.com/grit-book/) by Angela Duckworth. These two books enhance eachother, with Grit speaking more about theory and Designing Your Life more about practice.
-
-I'm watching a korean reality television series called 'The Genius'. Its devilishly complex games and focus on social interactions are keeping me engaged for longer than I like to admit. You can watch some episodes [here](https://www.youtube.com/playlist?list=PL9suu7e7YWZ0rw06g9_cOi_cnzpeXeUCc).
-
-Life is really good right now. I'm happy with where it's going. If you want to know more, give me a call: 949-630-8546
+![yes-gif](./blog/images/yes.gif)
 

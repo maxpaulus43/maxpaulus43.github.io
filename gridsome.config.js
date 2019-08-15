@@ -14,7 +14,6 @@ module.exports = {
       options: {
         path: 'blog/*.md',
         typeName: 'BlogPost',
-        route: '/blog/:slug',
         refs: {
           tags: {
             typeName: 'Tag',
@@ -36,7 +35,6 @@ module.exports = {
       options: {
         path: 'portfolio/*.md',
         typeName: 'Project',
-        route: '/portfolio/:slug',
         refs: {
           skills: {
             typeName: 'Skill',
