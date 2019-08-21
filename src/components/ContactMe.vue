@@ -1,14 +1,10 @@
 <template>
   <div>
     <h2>Contact Me</h2>
-
     <form action="https://formspree.io/maxpaulus43@gmail.com" method="POST">
       <div class="md:flex md:justify-start md:items-center mb-3">
         <div class="md:w-1/6">
-          <label
-            class="block font-bold md:text-right mb-1 md:mb-0 pr-4"
-            for="name"
-          >Full Name</label>
+          <label class="block font-bold md:text-right mb-1 md:mb-0 pr-4" for="name">Full Name</label>
         </div>
         <div class="md:w-5/6">
           <input
@@ -21,10 +17,7 @@
       </div>
       <div class="md:flex md:justify-start md:items-center mb-3">
         <div class="md:w-1/6">
-          <label
-            class="block font-bold md:text-right mb-1 md:mb-0 pr-4"
-            for="email"
-          >Email</label>
+          <label class="block font-bold md:text-right mb-1 md:mb-0 pr-4" for="email">Email</label>
         </div>
         <div class="md:w-5/6">
           <input

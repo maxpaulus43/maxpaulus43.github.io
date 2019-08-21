@@ -2,7 +2,7 @@
   <div class="pb-20 text-xl max-w-4xl m-auto">
     <header>
       <nav
-        class="navbar fixed bottom-0 left-0 right-0 pl-5 pr-5 h-12 flex justify-between bg-white shadow-navbar md:shadow-none md:relative"
+        class="navbar fixed bottom-0 left-0 right-0 pl-5 pr-5 h-12 flex justify-between bg-white shadow-navbar md:shadow-none md:relative z-10"
       >
         <g-link
           v-for="navItem in navItems"
@@ -23,8 +23,6 @@
     <main class="px-3">
       <slot />
     </main>
-
-    <footer></footer>
   </div>
 </template>
 
