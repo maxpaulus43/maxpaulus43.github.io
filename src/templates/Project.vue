@@ -16,6 +16,10 @@ query Project ($id: String!) {
         title
         excerpt
         content
+        skills {
+          id
+          path
+        }
     }
 }
 </page-query>
