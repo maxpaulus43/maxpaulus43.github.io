@@ -1,11 +1,9 @@
 ---
 author: Max Paulus
-date: 2019-08-26
+date: 2019-09-26
 excerpt: Remember the last good story you heard from another person. It could be on television or in real life. Do it now in your head...
 tags: ['storytelling', 'self-help']
 ---
-
-
 
 # Storytelling
 
