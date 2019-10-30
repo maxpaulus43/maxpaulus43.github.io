@@ -7,6 +7,6 @@ export default function (Vue, { router, head, isClient }) {
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)
 
-  head.link.push({ rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Barlow|Oswald&display=swap' })
+  head.link.push({ rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Oswald|Zilla+Slab:300,300i,600,600i&display=swap' })
   head.link.push({ rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css' })
 }

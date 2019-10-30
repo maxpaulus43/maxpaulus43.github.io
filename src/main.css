@@ -1,13 +1,15 @@
 body {
-  font-family:  "Barlow";
+  font-family: 'Zilla Slab', serif ;
 }
 
-h1,h2,h3 {
+h1,h2,h3,h4 {
   font-family: 'Oswald', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 
 .link {
-  @apply bg-gray-300 rounded-lg px-1;
+  @apply bg-gray-300;
+  @apply rounded-lg ;
+  @apply px-1;
 }
 
 .link:hover {
@@ -20,6 +22,7 @@ h1,h2,h3 {
     @apply mt-1;
   }
 }
+
 /*
 sm = 640
 md = 768

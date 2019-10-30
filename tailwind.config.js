@@ -7,10 +7,8 @@ module.exports = {
       }
     },
     variants: {
-      // Some useful comment
     },
     plugins: [
-      // Some useful comment
     ]
   }
   
