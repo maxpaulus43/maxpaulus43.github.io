@@ -15,7 +15,7 @@
             <g-link v-for="skill in edge.node.skills" :key="skill.id" :to="skill.path">
               <span
                 class="inline-block bg-gray-100 px-3 py-1 text-sm font-semibold text-gray-500 mr-2 hover:bg-gray-200"
-              >{{skill.id}}</span>
+              >#{{skill.id}}</span>
             </g-link>
           </div>
         </div>

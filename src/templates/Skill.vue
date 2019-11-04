@@ -1,6 +1,11 @@
 <template>
   <Layout>
     <h2>#{{$page.skill.id}}</h2>
+    <Pager
+      class="w-full flex justify-center my-2"
+      :info="$page.skill.belongsTo.pageInfo"
+      linkClass="px-3 hover:bg-gray-400"
+    />
     <div class="flex flex-col">
       <g-link v-for="edge in $page.skill.belongsTo.edges" :key="edge.node.id" :to="edge.node.path">
         <div class="shadow p-3 hover:shadow-lg">

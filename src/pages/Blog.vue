@@ -1,5 +1,10 @@
 <template>
   <Layout>
+    <Pager
+      class="w-full flex justify-center my-2"
+      :info="$page.blogPosts.pageInfo"
+      linkClass="px-3 hover:bg-gray-400"
+    />
     <div class="flex flex-col">
       <g-link v-for="edge in $page.blogPosts.edges" :key="edge.node.id" :to="edge.node.path">
         <div class="shadow p-3 hover:shadow-lg">

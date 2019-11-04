@@ -20,7 +20,7 @@ A script that analyzes the entire amazon app and checks for any unauthorized usa
 
 ## Feature Level Location Permissions
 
-A page where users of the amazon app can intricately customize which parts of the app may access location. Written in react native. Greatly increased transparency to 
+A page where users of the amazon app can intricately customize which parts of the app may access location. Written in react native. The amazon app is huge, and it was always a pain to figure out where exactly your location was being used. This page greatly increased transparency to our customers.
 
 **Skills**: [react native](/skill/react-native), [big data](/skill/big-data)
 
