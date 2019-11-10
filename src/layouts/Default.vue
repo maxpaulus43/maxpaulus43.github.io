@@ -28,7 +28,7 @@
 
 <static-query>
 query {
-  metaData {
+  metadata {
     siteName
   }
 }
@@ -48,11 +48,11 @@ export default {
       { text: "Home", path: "/", icon: "fa-home" },
       {
         text: "Work",
-        path: "/portfolio",
+        path: "/portfolio/",
         icon: "fa fa-folder-open"
       },
-      { text: "Blog", path: "/blog", icon: "fa-book" },
-      { text: "Now", path: "/now", icon: "fa-clock", overflow: true },
+      { text: "Blog", path: "/blog/", icon: "fa-book" },
+      { text: "Now", path: "/now/", icon: "fa-clock", overflow: true },
       {
         text: "Contact Me",
         path: "/#contact-me",

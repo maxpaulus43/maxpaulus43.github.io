@@ -5,7 +5,7 @@
         <strong>{{proj.title}}</strong>
         <p class="text-sm">{{proj.summary}}</p>
     </g-link>
-    <g-link to="/portfolio">More...</g-link>
+    <g-link to="/portfolio/">More...</g-link>
   </div>
 </template>
 

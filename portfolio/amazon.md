@@ -16,16 +16,16 @@ Here are a few project I worked on...
 
 A script that analyzes the entire amazon app and checks for any unauthorized usage of device location. It runs every day, searching for violators. It's weary eyes always scanning the source code. No violations will go unpunished :fist:
 
-**Skills**: [Continuous Integration/Deployment](/skill/ci-cd), [ruby](/skill/ruby), [android](/skill/android), [ios](/skill/ios)
+**Skills**: [Continuous Integration/Deployment](/skill/ci-cd/), [ruby](/skill/ruby/), [android](/skill/android/), [ios](/skill/ios/)
 
 ## Feature Level Location Permissions
 
 A page where users of the amazon app can intricately customize which parts of the app may access location. Written in react native. The amazon app is huge, and it was always a pain to figure out where exactly your location was being used. This page greatly increased transparency to our customers.
 
-**Skills**: [react native](/skill/react-native), [big data](/skill/big-data)
+**Skills**: [react native](/skill/react-native/), [big data](/skill/big-data/)
 
 ## Amazon Multi Factor Auth Notification
 
 In 2019, the EU started enforcing multifactor authentication for all shopping applications. This notification was written in objective C. It displayed at certain times to remind EU customers that they needed to update their payment methods. This project probably gave me the most experience with the whole software development project process.
 
-**Skills**: [ios](/skill/ios), [project management](/skill/project-management)
+**Skills**: [ios](/skill/ios/), [project management](/skill/project-management/)

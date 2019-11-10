@@ -18,6 +18,3 @@ This website is long overdue, and should have been live many months ago, but ala
 **[Netlify](https://www.netlify.com/)**: at first, I was using Github Pages, but netlify has more features while still being free! Go modern web technologies!
 
 **Markdown**: i've fallen in love with markdown (mostly because of [typora](https://typora.io/)). All my notes on my current laptop are written in it. My now page and all my blogs will be written in markdown. It just looks so good! I'm gonna try to incorporate markdown into more things.
-
-
-

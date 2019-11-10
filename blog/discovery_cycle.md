@@ -24,7 +24,7 @@ I've drawn it to look like a compass to remind myself of it's purpose: to lead m
 
 Try new things *all the time*. Experiment constantly. The purpose of this is to notice which things work and which things don't. Things work when they make you feel good. By constantly discovering new things, you learn not only about the world around you, but you learn about *yourself*. 
 
-If you don't know what things to try, think back to the principles of stoicism: Let your fears guide you to your next discovery. [The obstacle in your path IS the path](/blog/stoicism#turn-the-obstacle-upside-down).
+If you don't know what things to try, think back to the principles of stoicism: Let your fears guide you to your next discovery. [The obstacle in your path IS the path](/blog/stoicism/#turn-the-obstacle-upside-down).
 
 ## Feel
 

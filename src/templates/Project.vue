@@ -11,7 +11,7 @@ export default {};
 </script>
 
 <page-query>
-query Project ($id: String!) {
+query Project ($id: ID!) {
     project: project(id: $id) {
         title
         excerpt

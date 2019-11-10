@@ -44,7 +44,7 @@ export default {
 </script>
 
 <page-query>
-query Skill ($id: String!, $page: Int) {
+query Skill ($id: ID!, $page: Int) {
   skill (id:$id) {
     id
     belongsTo(perPage: 10, page: $page) @paginate  {

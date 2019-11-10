@@ -18,7 +18,7 @@ Here are a few projects I worked on...
 
 Our core backend service was essentially an auction-runner. It ran auctions among advertisers and spit back the advertisement of the highest bidder. SdkV3 of our client-side code fully improved the auction logic from previous versions. It allowed for multiple simultaneous auctions to run at the same time, giving our clients a much better chance of making more money. We had to solve many problems with concurrency and parallel computing. Totally worth it for the benefit of our clients.
 
-**Skills**: [java](/skill/java), [aws](/skill/aws)
+**Skills**: [java](/skill/java/), [aws](/skill/aws/)
 
 ## Aerserv/Inmobi Integration
 
@@ -30,7 +30,7 @@ After being acquired by the famous advertising company [InMobi](https://www.inmo
 
 In an effort to help our clients run their own advertising campaigns, we set out on a large project called 'Direct Campaigns'. I was in charge of creating the backend API's for every operation a user might want to execute: creating campaigns, deleting campaigns, updating campaigns, etc... It was a large undertaking, especially since I also created all the documentation for it.
 
-**Skills**: [vuejs](/skill/vuejs), [Ruby Rails](/skill/ruby), Restful APIs, [HTML](/skill/html), [CSS](/skill/css), [javascript](/skill/js), JQuery, documentation
+**Skills**: [vuejs](/skill/vuejs/), [Ruby Rails](/skill/ruby/), Restful APIs, [HTML](/skill/html/), [CSS](/skill/css/), JQuery, documentation
 
 
 

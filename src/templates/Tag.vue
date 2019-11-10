@@ -45,7 +45,7 @@ export default {
 </script>
 
 <page-query>
-query Tag ($id: String!, $page: Int) {
+query Tag ($id: ID!, $page: Int) {
   tag (id:$id) {
     id
     belongsTo (perPage: 10, page: $page) @paginate  {

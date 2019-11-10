@@ -8,6 +8,10 @@ module.exports = {
   siteName: 'Paulus Palace',
   siteDescription: 'This is where Max shows off all the stuff in his mind palace.',
   siteUrl: 'https://maxpaul.us',
+  templates: {
+    Tag: '/tag/:id',
+    Skill: '/skill/:id'
+  },
   plugins: [
     {
       use: '@gridsome/source-filesystem',
@@ -17,7 +21,6 @@ module.exports = {
         refs: {
           tags: {
             typeName: 'Tag',
-            route: 'tag/:id',
             create: true
           }
         }
@@ -38,7 +41,6 @@ module.exports = {
         refs: {
           skills: {
             typeName: 'Skill',
-            route: 'skill/:id',
             create: true
           }
         }
