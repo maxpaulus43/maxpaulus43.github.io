@@ -1,25 +1,19 @@
 ---
-date: 2019-10-29
+date: 2020-10-23
 ---
 
 # What's Max Up to Now?
 
-Right now, I'm in the midst of a few different things:
+Right now, I'm preparing for a wild ride.
 
-**TripPlanner:** I'm going through the process of creating a whole new app from scratch. I want to practice the steps all the way from idea to full product. Who knows, maybe it will be a great success! [Here's](https://github.com/maxpaulus43/trip-planner-frontend) the link to the GitHub. I'm working on it with my pal [Chris](http://www.chris-squared.xyz/). And here's a sneak into the UI mocks I drew myself!:
+**Baby:** I'm officially gonna have a real life daughter in about 2 weeks. I'm not gonna say the name because you're just gonna think it's bad. It's gonna be the most difficult, rewarding experience of my entire life. Thank the gods I have a partner to do it with me.
 
-![trip planner mocks](./blog/images/trip_planner_mocks.png)
+**Sudoku:** I'm obsessed with sudoku at the moment. Been watching tons of [cracking the cryptic](https://www.youtube.com/channel/UCC-UOdK8-mIjxBQm_ot1T-Q) videos and I even bought their [miracle sudoku app](https://apps.apple.com/us/app/miracle-sudoku/id1527363795). Who would have though there was so much logic to be learned from a few simple variations to the age old puzzle game?
 
-**Chinese:** I'm also trying to learn conversational Chinese. It's damn hard, but the [Hello Chinese](http://www.hellochinese.cc/) app makes it bearable. I try to at least one hour per day on it. I'm up to 50 characters learned and 180 words learned. :speech_balloon: :cn: 
+**Reading:** I've been reading 
 
-**Reading:** I've been unable to satisfy my appetite for fiction lately. No matter what I read, I need more. In the last 5 weeks, I've read 6 books.
-
-1. Exhalation
-2. The Three Body Problem
-3. Circe
-4. A Court of Thorns and Roses
-5. The Outsider
-6. A Court of Mist and Fury
+1. *Fevre* by George R.R. Martin
+2. *How Not to be Wrong: The Power of Mathematical Thinking* by Jordan Ellenberg
 
 Please [contact me](/#contact-me) if you have any good recommendations!
 
