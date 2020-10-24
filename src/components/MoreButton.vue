@@ -39,7 +39,7 @@ export default {
 #popup-menu {
   @apply absolute bg-white z-10;
   min-width: 200px;
-  bottom: 38px;
+  top: 40px;
   right: -20px;
 }
 </style>

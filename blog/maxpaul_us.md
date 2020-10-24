@@ -7,7 +7,7 @@ tags: ['programming', 'vue', 'frontend']
 
 # maxpaul.us Is Born!
 
-This website is long overdue, and should have been live many months ago, but alas, it has been beautifully born! ​I took a weekend and hunkered down on my living room couch to ​bust out the main content of the site. Here are the details:
+This website is long overdue, and should have been live many months ago, but alas, it has been beautifully born! ​I took a wdeekend and hunkered down on my living room couch to ​bust out the main content of the site. Here are the details:
 
 ## Frameworks
 
