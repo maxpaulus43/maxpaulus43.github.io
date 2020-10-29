@@ -1,6 +1,9 @@
 <template>
   <div class="flex flex-col min-h-screen">
     <div class="pb-20 text-xl max-w-4xl m-auto flex-grow">
+
+      <ContactMe v-if="showContactModal" @close="showContactModal = false"/>
+
       <header>
         <nav
           class="navbar fixed top-0 left-0 right-0 pl-5 pr-5 h-12 flex justify-between bg-white shadow-navbar md:shadow-none md:relative z-10"
@@ -40,7 +43,9 @@
         </g-link>
       </div>
 
-      <div class="text-xl font-bold">Contact Max!</div>
+      <button class="text-xl font-bold" @click="showContactModal = true">
+        Contact Max!
+      </button>
 
       <div class="flex flex-col">
         <div class="text-xl font-bold">Links</div>
@@ -68,14 +73,17 @@ query {
 
 <script>
 import MoreButton from "~/components/MoreButton.vue";
+import ContactMe from "~/components/ContactMe.vue";
 
 export default {
   components: {
     MoreButton,
+    ContactMe
   },
   data: () => ({
     drawer: null,
     color: "teal darken-2",
+    showContactModal: false,
     navItems: [
       { text: "Home", path: "/", icon: "fa-home" },
       {
@@ -90,12 +98,6 @@ export default {
         icon: "fa-clock",
         overflow: true,
       },
-      {
-        text: "Contact Me",
-        path: "/#contact-me",
-        icon: "fa-phone",
-        overflow: true,
-      },
     ],
   }),
   computed: {
@@ -105,7 +107,7 @@ export default {
   },
   props: {
     source: String,
-  },
+  }
 };
 </script>
 
