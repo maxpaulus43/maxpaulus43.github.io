@@ -11,3 +11,10 @@
 1. `gridsome develop` to start a local dev server at `http://localhost:8080`
 2. Happy coding 🎉🙌
 
+## Reference
+
+[gridsome docs](https://gridsome.org/docs/)
+[vue docs](https://vuejs.org/v2/guide/)
+[tailwind css docs](https://tailwindcss.com/)
+
+
