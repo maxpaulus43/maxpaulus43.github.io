@@ -5,9 +5,14 @@ export default function Introduction() {
   return (
     <div className="flex flex-col items-center mt-3 md:flex-row mb-3" id="introduction">
       <div className="w-64 h-64 md:w-1/3 md:mr-4 mb-4 md:mb-0">
-        <div className="w-full h-full bg-gray-200 rounded-full flex items-center justify-center shadow-lg md:shadow-none">
-          <span className="text-gray-500 text-sm">Profile Image</span>
-        </div>
+        <Image
+          alt="profile image"
+          src="/max_profile.png"
+          width={500}
+          height={500}
+          className="rounded-full shadow-lg md:shadow-none w-full h-full object-cover"
+          priority
+        />
       </div>
       <div className="md:w-2/3 text-center md:text-left">
         <h2 className="text-2xl font-bold mb-4">I'm Max!</h2>
