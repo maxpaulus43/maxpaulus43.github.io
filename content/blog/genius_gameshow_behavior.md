@@ -9,7 +9,7 @@ tags: ['psychology','tv']
 
 'The Genius' is a Korean game show that pits 12 individuals against eachother in a battle of wits and political skill. I just discovered the show yesterday after watching [a great video](https://www.youtube.com/watch?v=1Lng4dn1uAc) from youtube user "Just Write". After watching a few episodes, I have to agree with the video on almost all of the points: the show has *style*, the editing is charmingly good, the focus on interpersonal relationships is hella' engaging, and the music is top notch. Plus, episode 5 had me and my girlfriend making notes like this:
 
-![genius_diagram](./images/genius_diagram.png)
+![genius_diagram](/blog/images/genius_diagram.png)
 
  The situation in episode five was this: two losing players faced off against eachother in a death match game. Each "death-matcher" had to play rock/paper/scissors exactly once with every other player in a stream of games. The object of the death match game was to have the longest r/p/s. win streak. I want to talk about some of the behaviors I noticed throughout this death match game and how they can help explain 3 human behaviors more generally: humans are selfish, humans remember feelings more than actions, and ultimately humans forgive. 
 
@@ -42,4 +42,3 @@ The capacity for humans to forgive is strong; stronger than anything else. Forgi
 Humans are fussy, imperfect creatures. They can be selfish at times (a lot of times), and they can be emotional and illogical. But if you can look past those qualities and learn to forgive, humans will surprise you in ways that no other creature can.
 
  I don't usually enjoy reality television, but I'm glad I gave this show a shot. Of course, the show could all be scripted, in which case I applaud the writers. A seemingly simple game like rock/paper/scissors can turn out to reveal a few good lessons about human behavior. I'll be interested to see what more 'The Genius' has in store. You can watch the show [here](https://www.youtube.com/playlist?list=PL9suu7e7YWZ0rw06g9_cOi_cnzpeXeUCc)
-

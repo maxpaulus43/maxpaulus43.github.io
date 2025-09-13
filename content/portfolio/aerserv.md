@@ -6,7 +6,7 @@ start-date:
 end-date: 
 ---
 
-![aerserv-inmobi](./images/aerserv-inmobi.png)
+![aerserv-inmobi](/portfolio/images/aerserv-inmobi.png)
 
 Aerserv was my first job outside of college. Aerserv was a small(ish) advertising platform, until it was acquired by InMobi in 2018. It was here where I learned how much I didn't know about anything.
 
@@ -31,7 +31,3 @@ After being acquired by the famous advertising company [InMobi](https://www.inmo
 In an effort to help our clients run their own advertising campaigns, we set out on a large project called 'Direct Campaigns'. I was in charge of creating the backend API's for every operation a user might want to execute: creating campaigns, deleting campaigns, updating campaigns, etc... It was a large undertaking, especially since I also created all the documentation for it.
 
 **Skills**: [vuejs](/skill/vuejs/), [Ruby Rails](/skill/ruby/), Restful APIs, [HTML](/skill/html/), [CSS](/skill/css/), JQuery, documentation
-
-
-
-

@@ -4,7 +4,7 @@ excerpt: Amazon is a global retail company which specializes in online sales.
 skills: ['ruby', 'ci-cd', 'react-native', 'android', 'ios', 'java', 'project-management', 'teamwork', 'big-data']
 ---
 
-![amazon](./images/amazonlogo.jpg){width=150}
+![amazon](/portfolio/images/amazonlogo.jpg){width=150}
 
 I started working at Amazon in March of 2019. It's been one of the greatest learning experiences of my life by a large margin. Partially because I moved to the heart of San Francisco in the process. 
 

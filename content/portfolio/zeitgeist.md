@@ -4,7 +4,7 @@ excerpt: Zeitgeist is a google chrome extension which helps you find out what ot
 skills: ['vuejs', 'chrome-extension', 'dynamodb', 'ci-cd']
 ---
 
-![zeitgeist](./images/zeitgeist.jpeg){height=110}
+![zeitgeist](/portfolio/images/zeitgeist.jpeg){height=110}
 
 # [Zeitgeist](https://github.com/ZeitgeistOrg)
 
@@ -52,4 +52,3 @@ I'm still sometimes working on zeitgeist today. I've recruited my good friend, [
 
 * CloudFormation: I've been extremely interested to learn about infrastructure as code. I had never used it before and the idea of everything being in code was so appealing that I had to include it in this project somehow
 * AWS: AWS is the backbone of everything! Plus it was easy to show off a demo using an s3 bucket.
-

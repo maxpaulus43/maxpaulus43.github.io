@@ -9,7 +9,7 @@ tags: ['psychology', 'self-help']
 
 This is the discovery cycle:
 
-##### ![discovery cycle](./images/discovery_cycle.jpg){width=500}
+##### ![discovery cycle](/blog/images/discovery_cycle.jpg){width=500}
 
 I've drawn it to look like a compass to remind myself of it's purpose: to lead me to where I want to be. It's made up of 6 steps, which I'll explain below:
 
@@ -34,7 +34,7 @@ The discovery process will trigger feelings within you. Pay attention to these f
 
 Naming the feeling gives you power over it. If you can't name it, it's completely out of your control. Naming your feelings also helps communicate them to those who are important to you. Naming prevents confusion and frustration. The more feelings you name, the clearer your thinking becomes. Here's a graph of common feelings that may help you:
 
-![feelings wheel](./images/feelings_wheel.jpg)
+![feelings wheel](/blog/images/feelings_wheel.jpg)
 
 ## Express
 
