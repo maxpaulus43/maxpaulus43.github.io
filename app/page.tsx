@@ -4,7 +4,6 @@ import { getHomeData } from '../lib/home';
 export default async function Home() {
   const homeData = await getHomeData();
 
-  console.log(JSON.stringify(homeData));
   if (!homeData) {
     return (
       <Layout>

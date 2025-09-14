@@ -1,55 +1,43 @@
-import fs from 'fs';
 import path from 'path';
-import matter from 'gray-matter';
-import { remark } from 'remark';
-import html from 'remark-html';
+import { BaseContent, processMarkdownFile, extractTitleFromContent, getMarkdownFiles, generateSlugFromFilename, generateSlugParams } from './markdown-utils';
 
 const blogDirectory = path.join(process.cwd(), 'content', 'blog');
 
-export interface BlogPost {
+export interface BlogPost extends BaseContent {
   slug: string;
-  title: string;
   author: string;
   date: string;
   excerpt: string;
   tags: string[];
-  contentHtml?: string;
 }
 
-export function getSortedBlogData(): BlogPost[] {
-  // Get file names under /content/blog
-  const fileNames = fs.readdirSync(blogDirectory);
-  const allBlogData = fileNames
-    .filter((fileName) => fileName.endsWith('.md'))
-    .map((fileName) => {
-      // Remove ".md" from file name to get slug
-      const slug = fileName.replace(/\.md$/, '');
+export function getSortedBlogData(): Omit<BlogPost, 'contentHtml'>[] {
+  const fileNames = getMarkdownFiles(blogDirectory);
+  const allBlogData = fileNames.map((fileName) => {
+    const slug = generateSlugFromFilename(fileName);
+    const fullPath = path.join(blogDirectory, fileName);
+    
+    // For listing, we don't need to process the full markdown content
+    const fs = require('fs');
+    const matter = require('gray-matter');
+    const fileContents = fs.readFileSync(fullPath, 'utf8');
+    const matterResult = matter(fileContents);
 
-      // Read markdown file as string
-      const fullPath = path.join(blogDirectory, fileName);
-      const fileContents = fs.readFileSync(fullPath, 'utf8');
+    const title = extractTitleFromContent(
+      matterResult.data.title,
+      matterResult.content,
+      slug
+    );
 
-      // Use gray-matter to parse the post metadata section
-      const matterResult = matter(fileContents);
-
-      // Extract title from content if not in frontmatter
-      let title = matterResult.data.title;
-      if (!title) {
-        // Try to extract title from first h1 in content
-        const titleMatch = matterResult.content.match(/^#\s+(.+)$/m);
-        title = titleMatch ? titleMatch[1] : slug;
-      }
-
-      // Combine the data with the slug
-      return {
-        slug,
-        title,
-        author: matterResult.data.author || 'Max Paulus',
-        date: matterResult.data.date ? String(matterResult.data.date) : '',
-        excerpt: matterResult.data.excerpt || '',
-        tags: matterResult.data.tags || [],
-      };
-    });
+    return {
+      slug,
+      title,
+      author: matterResult.data.author || 'Max Paulus',
+      date: matterResult.data.date ? String(matterResult.data.date) : '',
+      excerpt: matterResult.data.excerpt || '',
+      tags: matterResult.data.tags || [],
+    };
+  });
 
   // Sort posts by date (newest first)
   return allBlogData.sort((a, b) => {
@@ -62,51 +50,31 @@ export function getSortedBlogData(): BlogPost[] {
 }
 
 export async function getBlogData(slug: string): Promise<BlogPost | null> {
-  try {
-    const fullPath = path.join(blogDirectory, `${slug}.md`);
-    const fileContents = fs.readFileSync(fullPath, 'utf8');
-
-    // Use gray-matter to parse the post metadata section
-    const matterResult = matter(fileContents);
-
-    // Use remark to convert markdown into HTML string
-    const processedContent = await remark()
-      .use(html)
-      .process(matterResult.content);
-    const contentHtml = processedContent.toString();
-
-    // Extract title from content if not in frontmatter
-    let title = matterResult.data.title;
-    if (!title) {
-      // Try to extract title from first h1 in content
-      const titleMatch = matterResult.content.match(/^#\s+(.+)$/m);
-      title = titleMatch ? titleMatch[1] : slug;
-    }
-
-    // Combine the data with the slug and content
-    return {
-      slug,
-      contentHtml,
-      title,
-      author: matterResult.data.author || 'Max Paulus',
-      date: matterResult.data.date ? String(matterResult.data.date) : '',
-      excerpt: matterResult.data.excerpt || '',
-      tags: matterResult.data.tags || [],
-    };
-  } catch {
+  const fullPath = path.join(blogDirectory, `${slug}.md`);
+  const result = await processMarkdownFile(fullPath);
+  
+  if (!result) {
     return null;
   }
+
+  const { matterResult, contentHtml } = result;
+  const title = extractTitleFromContent(
+    matterResult.data.title,
+    matterResult.content,
+    slug
+  );
+
+  return {
+    slug,
+    contentHtml,
+    title,
+    author: matterResult.data.author || 'Max Paulus',
+    date: matterResult.data.date ? String(matterResult.data.date) : '',
+    excerpt: matterResult.data.excerpt || '',
+    tags: matterResult.data.tags || [],
+  };
 }
 
 export function getAllBlogSlugs() {
-  const fileNames = fs.readdirSync(blogDirectory);
-  return fileNames
-    .filter((fileName) => fileName.endsWith('.md'))
-    .map((fileName) => {
-      return {
-        params: {
-          slug: fileName.replace(/\.md$/, ''),
-        },
-      };
-    });
+  return generateSlugParams(blogDirectory);
 }
