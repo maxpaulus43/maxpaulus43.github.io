@@ -75,6 +75,28 @@ export async function getBlogData(slug: string): Promise<BlogPost | null> {
   };
 }
 
+export function getBlogsByTag(tag: string): Omit<BlogPost, 'contentHtml'>[] {
+  const allPosts = getSortedBlogData();
+  return allPosts.filter(post => 
+    post.tags.some(postTag => 
+      postTag.toLowerCase() === tag.toLowerCase()
+    )
+  );
+}
+
+export function getAllBlogTags(): string[] {
+  const allPosts = getSortedBlogData();
+  const tagsSet = new Set<string>();
+  
+  allPosts.forEach(post => {
+    post.tags.forEach(tag => {
+      tagsSet.add(tag.toLowerCase());
+    });
+  });
+  
+  return Array.from(tagsSet).sort();
+}
+
 export function getAllBlogSlugs() {
   return generateSlugParams(blogDirectory);
 }
