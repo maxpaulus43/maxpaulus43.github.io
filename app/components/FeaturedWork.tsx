@@ -1,16 +1,18 @@
+import ContentCard from './ContentCard';
+
 export default function FeaturedWork() {
   const featuredProjects = [
     {
-      company: "Amazon",
-      title: "Software Developer",
-      description: "Built mobile shopping features for millions of users, focusing on location services and multi-factor authentication.",
-      skills: ["react-native", "java", "ios", "android"]
+      title: "Amazon",
+      excerpt: "Built mobile shopping features for millions of users, focusing on location services and multi-factor authentication.",
+      skills: ["react-native", "java", "ios", "android"],
+      slug: "amazon"
     },
     {
-      company: "Aerserv/InMobi", 
-      title: "Software Developer",
-      description: "First role out of college working on enterprise-level digital advertising solutions and learning full-stack development.",
-      skills: ["java", "mysql", "html", "css"]
+      title: "Aerserv/InMobi", 
+      excerpt: "First role out of college working on enterprise-level digital advertising solutions and learning full-stack development.",
+      skills: ["java", "mysql", "html", "css"],
+      slug: "aerserv"
     }
   ];
 
@@ -18,25 +20,16 @@ export default function FeaturedWork() {
     <section className="featured-work-section">
       <h2>Featured Work</h2>
       
-      <div className="work-preview">
-        {featuredProjects.map((project, index) => (
-          <div key={index} className="work-card">
-            <div className="work-header">
-              <div className="company-logo">
-                {project.company.charAt(0)}
-              </div>
-              <div>
-                <h3>{project.company}</h3>
-                <p>{project.title}</p>
-              </div>
-            </div>
-            <p>{project.description}</p>
-            <div className="work-tags">
-              {project.skills.map((skill) => (
-                <span key={skill}>#{skill}</span>
-              ))}
-            </div>
-          </div>
+      <div className="grid gap-6 my-8">
+        {featuredProjects.map((project) => (
+          <ContentCard 
+            key={project.slug}
+            item={project}
+            basePath="/portfolio"
+            tagBasePath="/skill"
+            tagField="skills"
+            variant="portfolio"
+          />
         ))}
       </div>
 
