@@ -30,12 +30,13 @@ export default async function PortfolioPost({ params }: PortfolioPageProps) {
               <p className="text-sm font-medium mb-2">Skills:</p>
               <div className="flex flex-wrap gap-2">
                 {post.skills.map((skill: string) => (
-                  <span
+                  <Link
                     key={skill}
-                    className="inline-block bg-gray-100 px-3 py-1 text-sm font-semibold text-gray-500"
+                    href={`/skill/${skill.toLowerCase()}`}
+                    className="inline-block bg-gray-100 hover:bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-500 hover:text-gray-700 transition-colors duration-200"
                   >
                     #{skill}
-                  </span>
+                  </Link>
                 ))}
               </div>
             </div>

@@ -34,12 +34,13 @@ export default async function BlogPost({ params }: BlogPageProps) {
               <p className="text-sm font-medium mb-2">Tags:</p>
               <div className="flex flex-wrap gap-2">
                 {post.tags.map((tag: string) => (
-                  <span
+                  <Link
                     key={tag}
-                    className="inline-block bg-gray-100 px-3 py-1 text-sm font-semibold text-gray-500"
+                    href={`/tag/${tag.toLowerCase()}`}
+                    className="inline-block bg-gray-100 hover:bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-500 hover:text-gray-700 transition-colors duration-200"
                   >
                     #{tag}
-                  </span>
+                  </Link>
                 ))}
               </div>
             </div>
