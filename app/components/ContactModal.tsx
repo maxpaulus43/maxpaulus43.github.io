@@ -1,60 +1,113 @@
 'use client';
 
+import { useEffect, useState } from 'react';
+
 interface ContactModalProps {
   onClose: () => void;
 }
 
 export default function ContactModal({ onClose }: ContactModalProps) {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    // Trigger animation after component mounts
+    setIsVisible(true);
+    
+    // Prevent body scroll when modal is open
+    document.body.style.overflow = 'hidden';
+    
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, []);
+
+  const handleClose = () => {
+    setIsVisible(false);
+    // Delay the actual close to allow exit animation
+    setTimeout(onClose, 200);
+  };
+
+  const handleBackdropClick = (e: React.MouseEvent) => {
+    if (e.target === e.currentTarget) {
+      handleClose();
+    }
+  };
+
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-      <div className="bg-white p-6 rounded-lg shadow-lg max-w-md w-full mx-4">
-        <div className="flex justify-between items-center mb-4">
-          <h2 className="text-2xl font-bold">Contact Max</h2>
+    <div 
+      className={`contact-modal-backdrop ${isVisible ? 'visible' : ''}`}
+      onClick={handleBackdropClick}
+    >
+      <div className={`contact-modal ${isVisible ? 'visible' : ''}`}>
+        <div className="contact-modal-header">
+          <h2>Let's Connect</h2>
           <button
-            onClick={onClose}
-            className="text-gray-500 hover:text-gray-700"
+            onClick={handleClose}
+            className="contact-modal-close"
+            aria-label="Close modal"
           >
-            <i className="fa fa-times text-xl"></i>
+            <i className="fa fa-times"></i>
           </button>
         </div>
         
-        <div className="space-y-4">
-          <div>
-            <h3 className="font-semibold mb-2">Get in touch:</h3>
-            <div className="space-y-2">
-              <a
-                href="mailto:maxpaulus43@gmail.com"
-                className="flex items-center space-x-2 text-blue-600 hover:text-blue-800"
-              >
+        <div className="contact-modal-content">
+          <p className="contact-modal-subtitle">
+            Ready to discuss your next project or just want to say hello?
+          </p>
+          
+          <div className="contact-links">
+            <a
+              href="mailto:maxpaulus43@gmail.com"
+              className="contact-link"
+            >
+              <div className="contact-link-icon">
                 <i className="fa fa-envelope"></i>
-                <span>maxpaulus43@gmail.com</span>
-              </a>
-              <a
-                href="https://linkedin.com/in/max-paulus-1b456aa8"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center space-x-2 text-blue-600 hover:text-blue-800"
-              >
+              </div>
+              <div className="contact-link-content">
+                <span className="contact-link-title">Email</span>
+                <span className="contact-link-subtitle">maxpaulus43@gmail.com</span>
+              </div>
+              <i className="fa fa-arrow-right contact-link-arrow"></i>
+            </a>
+            
+            <a
+              href="https://linkedin.com/in/max-paulus-1b456aa8"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="contact-link"
+            >
+              <div className="contact-link-icon">
                 <i className="fab fa-linkedin"></i>
-                <span>LinkedIn Profile</span>
-              </a>
-              <a
-                href="https://github.com/maxpaulus43"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center space-x-2 text-blue-600 hover:text-blue-800"
-              >
+              </div>
+              <div className="contact-link-content">
+                <span className="contact-link-title">LinkedIn</span>
+                <span className="contact-link-subtitle">Professional Profile</span>
+              </div>
+              <i className="fa fa-external-link-alt contact-link-arrow"></i>
+            </a>
+            
+            <a
+              href="https://github.com/maxpaulus43"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="contact-link"
+            >
+              <div className="contact-link-icon">
                 <i className="fab fa-github"></i>
-                <span>GitHub Profile</span>
-              </a>
-            </div>
+              </div>
+              <div className="contact-link-content">
+                <span className="contact-link-title">GitHub</span>
+                <span className="contact-link-subtitle">Code & Projects</span>
+              </div>
+              <i className="fa fa-external-link-alt contact-link-arrow"></i>
+            </a>
           </div>
         </div>
         
-        <div className="mt-6 flex justify-end">
+        <div className="contact-modal-footer">
           <button
-            onClick={onClose}
-            className="px-4 py-2 bg-gray-500 text-white rounded hover:bg-gray-600"
+            onClick={handleClose}
+            className="btn-secondary"
           >
             Close
           </button>

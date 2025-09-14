@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import ContactModal from './ContactModal';
-import MoreButton from './MoreButton';
 
 interface NavItem {
   text: string;
@@ -22,13 +21,11 @@ const navItems: NavItem[] = [
 export default function Layout({ children }: { children: React.ReactNode }) {
   const [showContactModal, setShowContactModal] = useState(false);
 
-  const overflowItems = navItems.filter((item) => item.overflow);
-
   return (
     <div className="flex flex-col min-h-screen">
       {/* Geometric background */}
       <div className="geometric-bg"></div>
-      
+
       <div className="pb-20 text-xl max-w-4xl m-auto flex-grow">
         {showContactModal && (
           <ContactModal onClose={() => setShowContactModal(false)} />
@@ -40,14 +37,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <Link
                 key={navItem.text}
                 href={navItem.path}
-                className={`pt-3 text-white hover:text-cyan-400 transition-colors font-medium ${navItem.overflow ? 'hidden md:block' : ''}`}
+                className={`pt-3 text-white hover:text-cyan-400 transition-colors font-medium`}
               >
                 <i className={`fa ${navItem.icon} mr-2`}></i> {navItem.text}
               </Link>
             ))}
-            <div className="pt-3 md:hidden">
-              <MoreButton items={overflowItems} />
-            </div>
           </nav>
         </header>
 
