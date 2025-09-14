@@ -5,9 +5,9 @@ import { getPortfolioBySkill, getAllSkills } from '../../../lib/portfolio';
 import { notFound } from 'next/navigation';
 
 interface SkillPageProps {
-    params: {
+    params: Promise<{
         skill: string;
-    };
+    }>;
 }
 
 export async function generateStaticParams() {
@@ -45,8 +45,8 @@ export default async function SkillPage({ params }: SkillPageProps) {
 
                 <div className="flex flex-col space-y-4">
                     {projects.map((project) => (
-                        <ContentCard 
-                            key={project.slug} 
+                        <ContentCard
+                            key={project.slug}
                             item={project}
                             basePath="/portfolio"
                             tagBasePath="/skill"

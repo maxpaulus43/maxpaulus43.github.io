@@ -5,9 +5,9 @@ import { getBlogsByTag, getAllBlogTags } from '../../../lib/blog';
 import { notFound } from 'next/navigation';
 
 interface TagPageProps {
-  params: {
+  params: Promise<{
     tag: string;
-  };
+  }>;
 }
 
 export async function generateStaticParams() {
@@ -37,16 +37,16 @@ export default async function TagPage({ params }: TagPageProps) {
             ← Back to Blog
           </Link>
         </div>
-        
+
         <h1 className="text-3xl font-bold mb-4">POSTS TAGGED WITH {displayTag.toUpperCase()}</h1>
         <p className="text-gray-600 mb-6">
           Found {posts.length} post{posts.length !== 1 ? 's' : ''} tagged with {displayTag}
         </p>
-        
+
         <div className="flex flex-col space-y-4">
           {posts.map((post) => (
-            <ContentCard 
-              key={post.slug} 
+            <ContentCard
+              key={post.slug}
               item={post}
               basePath="/blog"
               tagBasePath="/tag"
