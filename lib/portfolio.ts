@@ -75,6 +75,28 @@ export async function getPortfolioData(slug: string): Promise<PortfolioPost | nu
   };
 }
 
+export function getPortfolioBySkill(skill: string): Omit<PortfolioPost, 'contentHtml'>[] {
+  const allProjects = getSortedPortfolioData();
+  return allProjects.filter(project => 
+    project.skills.some(projectSkill => 
+      projectSkill.toLowerCase() === skill.toLowerCase()
+    )
+  );
+}
+
+export function getAllSkills(): string[] {
+  const allProjects = getSortedPortfolioData();
+  const skillsSet = new Set<string>();
+  
+  allProjects.forEach(project => {
+    project.skills.forEach(skill => {
+      skillsSet.add(skill.toLowerCase());
+    });
+  });
+  
+  return Array.from(skillsSet).sort();
+}
+
 export function getAllPortfolioSlugs() {
   return generateSlugParams(portfolioDirectory);
 }
