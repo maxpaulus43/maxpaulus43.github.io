@@ -1,1 +1,2 @@
 - No need to run npm run dev. I am usually already running that in the background and checking the UI myself
+- the dev server is always running on https://localhost:3000

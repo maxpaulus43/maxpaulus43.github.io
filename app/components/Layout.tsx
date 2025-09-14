@@ -26,23 +26,26 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
   return (
     <div className="flex flex-col min-h-screen">
+      {/* Geometric background */}
+      <div className="geometric-bg"></div>
+      
       <div className="pb-20 text-xl max-w-4xl m-auto flex-grow">
         {showContactModal && (
           <ContactModal onClose={() => setShowContactModal(false)} />
         )}
 
         <header>
-          <nav className="navbar fixed top-0 left-0 right-0 pl-5 pr-5 h-12 flex justify-between bg-white shadow-navbar md:shadow-none md:relative z-10">
+          <nav className="navbar fixed top-0 left-0 right-0 pl-5 pr-5 h-16 flex justify-between bg-black/80 backdrop-blur-sm border-b border-gray-800 md:shadow-none md:relative z-10">
             {navItems.map((navItem) => (
               <Link
                 key={navItem.text}
                 href={navItem.path}
-                className={`pt-2 text-gray-800 hover:text-blue-600 transition-colors ${navItem.overflow ? 'hidden md:block' : ''}`}
+                className={`pt-3 text-white hover:text-cyan-400 transition-colors font-medium ${navItem.overflow ? 'hidden md:block' : ''}`}
               >
-                <i className={`fa ${navItem.icon} mr-1`}></i> {navItem.text}
+                <i className={`fa ${navItem.icon} mr-2`}></i> {navItem.text}
               </Link>
             ))}
-            <div className="pt-2 md:hidden">
+            <div className="pt-3 md:hidden">
               <MoreButton items={overflowItems} />
             </div>
           </nav>
@@ -53,14 +56,14 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         </main>
       </div>
 
-      <footer className="bg-gray-700 text-white flex justify-around p-4">
+      <footer className="bg-black border-t border-gray-800 text-white flex justify-around p-6">
         <div className="flex flex-col">
-          <div className="text-xl font-bold">Navigate</div>
+          <div className="text-xl font-bold text-cyan-400 mb-2">Navigate</div>
           {navItems.map((navItem) => (
             <Link
               key={navItem.text}
               href={navItem.path}
-              className="pt-2"
+              className="pt-1 hover:text-cyan-400 transition-colors"
             >
               {navItem.text}
             </Link>
@@ -68,23 +71,25 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         </div>
 
         <button
-          className="text-xl font-bold"
+          className="text-xl font-bold hover:text-cyan-400 transition-colors"
           onClick={() => setShowContactModal(true)}
         >
           Contact Max!
         </button>
 
         <div className="flex flex-col">
-          <div className="text-xl font-bold">Links</div>
-          <a href="https://linkedin.com/in/max-paulus-1b456aa8">
-            <i className="text-xl fab fa-linkedin"></i>
-          </a>
-          <a href="https://github.com/maxpaulus43">
-            <i className="text-xl fab fa-github"></i>
-          </a>
-          <a href="mailto:maxpaulus43@gmail.com">
-            <i className="text-xl fa fa-envelope"></i>
-          </a>
+          <div className="text-xl font-bold text-cyan-400 mb-2">Connect</div>
+          <div className="flex gap-4">
+            <a href="https://linkedin.com/in/max-paulus-1b456aa8" className="hover:text-cyan-400 transition-colors">
+              <i className="text-2xl fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/maxpaulus43" className="hover:text-cyan-400 transition-colors">
+              <i className="text-2xl fab fa-github"></i>
+            </a>
+            <a href="mailto:maxpaulus43@gmail.com" className="hover:text-cyan-400 transition-colors">
+              <i className="text-2xl fa fa-envelope"></i>
+            </a>
+          </div>
         </div>
       </footer>
     </div>

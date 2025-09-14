@@ -1,12 +1,15 @@
 ---
-title: "Welcome to My Website"
-description: "Software developer, blogger, and creator"
+title: "Max Paulus - Software Developer"
+description: "Building scalable enterprise applications and digital experiences"
 lastUpdated: "2024-12-13"
 ---
 
-![profile image](/max_profile.png)
+# Max Paulus - Software Developer
 
-## I'm Max!
+This file is no longer used for homepage content. The homepage is now built with React components for better maintainability and functionality.
 
-Hello and welcome to my website! I'll be showing off a lot of stuff here, but I'm mostly a software developer. This website is a place to discover a little bit more about me. If you want to see some of my work, click [here](/portfolio). I'm attempting to start a blog which you can find [here](/blog). I'll constantly be updating this website so please come back to see the new features. Hopefully you enjoy what I've done here.
-
+See:
+- `/app/page.tsx` - Main homepage component
+- `/app/components/HeroSection.tsx` - Hero section
+- `/app/components/FeaturedWork.tsx` - Work preview
+- `/app/components/LatestThoughts.tsx` - Blog preview

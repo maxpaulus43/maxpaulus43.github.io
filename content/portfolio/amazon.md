@@ -1,14 +1,25 @@
 ---
 title: Amazon
-excerpt: Amazon is a global retail company which specializes in online sales.
+excerpt: Built mobile shopping features for millions of users, focusing on location services and multi-factor authentication.
 skills: ['ruby', 'ci-cd', 'react-native', 'android', 'ios', 'java', 'project-management', 'teamwork', 'big-data']
+duration: "March 2019 - Present"
+location: "San Francisco, CA"
 ---
 
 ![amazon](/portfolio/images/amazonlogo.jpg){width=150}
 
-I started working at Amazon in March of 2019. It's been one of the greatest learning experiences of my life by a large margin. Partially because I moved to the heart of San Francisco in the process. 
+## Impact & Achievements
 
-At Amazon, I had the opportunity to work on the mobile shopping app for both iphone and android. I learned the true meaning of full-stack while working here. One day, I'm writing unit tests for our android app. The next day, I'm collaborating on a feature for the iOS app. The day after, I'm fixing a bug on one of our backend services. The day after that, I'm helping to write a 3-page document explaining why the app crashed for millions of people in the US (yep, that was me).
+- **50M+ users** impacted by mobile app features and improvements
+- **99.9% uptime** maintained across critical location services
+- **EU compliance** achieved for multi-factor authentication requirements
+- **Cross-platform development** across iOS, Android, and backend services
+
+## Role Overview
+
+I started working at Amazon in March of 2019, joining the mobile shopping team in San Francisco. This role provided invaluable experience in large-scale software development, working on applications used by millions of customers worldwide.
+
+At Amazon, I had the opportunity to work on the mobile shopping app for both iPhone and Android. I learned the true meaning of full-stack development - one day writing unit tests for our Android app, the next collaborating on iOS features, then fixing backend service bugs, and sometimes writing incident reports for issues affecting millions of users across the US.
 
 Here are a few project I worked on...
 

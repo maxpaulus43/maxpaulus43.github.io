@@ -1,27 +1,15 @@
 import Layout from './components/Layout';
-import { getHomeData } from '../lib/home';
+import HeroSection from './components/HeroSection';
+import FeaturedWork from './components/FeaturedWork';
+import LatestThoughts from './components/LatestThoughts';
 
-export default async function Home() {
-  const homeData = await getHomeData();
-
-  if (!homeData) {
-    return (
-      <Layout>
-        <div>
-          <h1 className="text-3xl font-bold mb-4">Welcome</h1>
-          <p>Content not found.</p>
-        </div>
-      </Layout>
-    );
-  }
-
+export default function Home() {
   return (
     <Layout>
-      <div>
-        <div
-          className="prose max-w-none"
-          dangerouslySetInnerHTML={{ __html: homeData.contentHtml }}
-        />
+      <div className="homepage-container">
+        <HeroSection />
+        <FeaturedWork />
+        <LatestThoughts />
       </div>
     </Layout>
   );
