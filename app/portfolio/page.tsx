@@ -1,5 +1,5 @@
 import Layout from '../components/Layout';
-import ProjectCard from '../components/ProjectCard';
+import ContentCard from '../components/ContentCard';
 import { getSortedPortfolioData } from '../../lib/portfolio';
 
 export default function Portfolio() {
@@ -21,7 +21,14 @@ export default function Portfolio() {
 
         <div className="flex flex-col space-y-4">
           {projects.map((project) => (
-            <ProjectCard key={project.slug} project={project} />
+            <ContentCard 
+              key={project.slug} 
+              item={project}
+              basePath="/portfolio"
+              tagBasePath="/skill"
+              tagField="skills"
+              tagLabel="Skills:"
+            />
           ))}
         </div>
       </div>

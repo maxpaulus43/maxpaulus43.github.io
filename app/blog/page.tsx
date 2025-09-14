@@ -1,5 +1,5 @@
 import Layout from '../components/Layout';
-import BlogCard from '../components/BlogCard';
+import ContentCard from '../components/ContentCard';
 import { getSortedBlogData } from '../../lib/blog';
 
 export default function Blog() {
@@ -11,7 +11,14 @@ export default function Blog() {
         {/* Blog Posts */}
         <div className="flex flex-col space-y-4">
           {blogPosts.map((post) => (
-            <BlogCard key={post.slug} post={post} />
+            <ContentCard 
+              key={post.slug} 
+              item={post}
+              basePath="/blog"
+              tagBasePath="/tag"
+              tagField="tags"
+              showDate={true}
+            />
           ))}
         </div>
       </div>

@@ -1,6 +1,6 @@
 import Layout from '../../components/Layout';
 import Link from 'next/link';
-import BlogCard from '../../components/BlogCard';
+import ContentCard from '../../components/ContentCard';
 import { getBlogsByTag, getAllBlogTags } from '../../../lib/blog';
 import { notFound } from 'next/navigation';
 
@@ -45,10 +45,14 @@ export default async function TagPage({ params }: TagPageProps) {
         
         <div className="flex flex-col space-y-4">
           {posts.map((post) => (
-            <BlogCard 
+            <ContentCard 
               key={post.slug} 
-              post={post} 
+              item={post}
+              basePath="/blog"
+              tagBasePath="/tag"
+              tagField="tags"
               highlightedTag={tag}
+              showDate={true}
             />
           ))}
         </div>

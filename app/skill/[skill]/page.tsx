@@ -1,6 +1,6 @@
 import Layout from '../../components/Layout';
 import Link from 'next/link';
-import ProjectCard from '../../components/ProjectCard';
+import ContentCard from '../../components/ContentCard';
 import { getPortfolioBySkill, getAllSkills } from '../../../lib/portfolio';
 import { notFound } from 'next/navigation';
 
@@ -45,10 +45,14 @@ export default async function SkillPage({ params }: SkillPageProps) {
 
                 <div className="flex flex-col space-y-4">
                     {projects.map((project) => (
-                        <ProjectCard 
+                        <ContentCard 
                             key={project.slug} 
-                            project={project} 
-                            highlightedSkill={skill}
+                            item={project}
+                            basePath="/portfolio"
+                            tagBasePath="/skill"
+                            tagField="skills"
+                            highlightedTag={skill}
+                            tagLabel="Skills:"
                         />
                     ))}
                 </div>
