@@ -46,6 +46,7 @@ export default async function SkillPage({ params }: SkillPageProps) {
                 <div className="flex flex-col space-y-4">
                     {projects.map((project) => (
                         <ContentCard
+                            variant='portfolio'
                             key={project.slug}
                             item={project}
                             basePath="/portfolio"

@@ -37,7 +37,7 @@ export default function Tag({
             ? 'bg-green-900 text-black rounded'
             : 'bg-gray-800 text-gray-400 hover:text-cyan-400 rounded',
         chip: highlighted
-            ? 'bg-cyan-400 text-black rounded-full border border-cyan-400'
+            ? 'bg-green-900 text-black rounded-full border border-cyan-400'
             : 'bg-gray-800 text-gray-300 rounded-full border border-gray-700 hover:border-cyan-400 hover:text-cyan-400',
         outline: highlighted
             ? 'bg-cyan-400 text-black border border-cyan-400 rounded'
