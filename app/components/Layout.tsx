@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import ContactModal from './ContactModal';
 
@@ -18,8 +18,33 @@ const navItems: NavItem[] = [
   { text: "Now", path: "/now", icon: "fa-clock", overflow: true },
 ];
 
-export default function Layout({ children }: { children: React.ReactNode }) {
-  const [showContactModal, setShowContactModal] = useState(false);
+interface LayoutProps {
+  children: React.ReactNode;
+  showContactModal?: boolean;
+  onContactModalClose?: () => void;
+  onContactClick?: () => void;
+}
+
+export default function Layout({ children, showContactModal = false, onContactModalClose, onContactClick }: LayoutProps) {
+  const [internalShowContactModal, setInternalShowContactModal] = useState(false);
+
+  const isModalOpen = showContactModal || internalShowContactModal;
+  
+  const handleContactClick = () => {
+    if (onContactClick) {
+      onContactClick();
+    } else {
+      setInternalShowContactModal(true);
+    }
+  };
+
+  const handleModalClose = () => {
+    if (onContactModalClose) {
+      onContactModalClose();
+    } else {
+      setInternalShowContactModal(false);
+    }
+  };
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -27,8 +52,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <div className="geometric-bg"></div>
 
       <div className="pb-20 text-xl max-w-4xl m-auto flex-grow">
-        {showContactModal && (
-          <ContactModal onClose={() => setShowContactModal(false)} />
+        {isModalOpen && (
+          <ContactModal onClose={handleModalClose} />
         )}
 
         <header>
@@ -66,7 +91,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
         <button
           className="text-xl font-bold hover:text-cyan-400 transition-colors"
-          onClick={() => setShowContactModal(true)}
+          onClick={handleContactClick}
         >
           Contact Max!
         </button>
