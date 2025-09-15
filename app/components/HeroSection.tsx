@@ -30,7 +30,7 @@ export default function HeroSection({ onContactClick }: HeroSectionProps) {
                     <i className="fa fa-folder-open"></i>
                     View My Work
                 </a>
-                <button 
+                <button
                     onClick={onContactClick}
                     className="btn-secondary"
                 >
@@ -49,15 +49,6 @@ export default function HeroSection({ onContactClick }: HeroSectionProps) {
                     Currently focused on advanced React patterns, performance optimization, and building personal knowledge management systems.
                     I believe in writing clean, maintainable code that delivers exceptional user experiences.
                 </p>
-            </div>
-
-            <div className="flex gap-2 my-6 flex-wrap">
-                <span className="bg-gray-800 text-gray-400 px-3 py-1 rounded-full text-sm font-medium border border-gray-600 transition-all duration-300 hover:text-cyan-400 hover:border-cyan-400">#react</span>
-                <span className="bg-gray-800 text-gray-400 px-3 py-1 rounded-full text-sm font-medium border border-gray-600 transition-all duration-300 hover:text-cyan-400 hover:border-cyan-400">#nextjs</span>
-                <span className="bg-gray-800 text-gray-400 px-3 py-1 rounded-full text-sm font-medium border border-gray-600 transition-all duration-300 hover:text-cyan-400 hover:border-cyan-400">#typescript</span>
-                <span className="bg-gray-800 text-gray-400 px-3 py-1 rounded-full text-sm font-medium border border-gray-600 transition-all duration-300 hover:text-cyan-400 hover:border-cyan-400">#aws</span>
-                <span className="bg-gray-800 text-gray-400 px-3 py-1 rounded-full text-sm font-medium border border-gray-600 transition-all duration-300 hover:text-cyan-400 hover:border-cyan-400">#java</span>
-                <span className="bg-gray-800 text-gray-400 px-3 py-1 rounded-full text-sm font-medium border border-gray-600 transition-all duration-300 hover:text-cyan-400 hover:border-cyan-400">#python</span>
             </div>
         </div>
     );

@@ -1,5 +1,4 @@
 import fs from 'fs';
-import path from 'path';
 import matter from 'gray-matter';
 import { remark } from 'remark';
 import html from 'remark-html';
@@ -18,7 +17,7 @@ export async function processMarkdownFile(filePath: string): Promise<{
 } | null> {
   try {
     const fileContents = fs.readFileSync(filePath, 'utf8');
-    
+
     // Use gray-matter to parse the post metadata section
     const matterResult = matter(fileContents);
 

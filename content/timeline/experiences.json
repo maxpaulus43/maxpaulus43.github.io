@@ -1,0 +1,45 @@
+{
+  "experiences": [
+    {
+      "title": "Full Stack Software Developer",
+      "company": "Amazon",
+      "duration": "March 2019 - September 2025",
+      "location": "San Francisco, CA",
+      "description": "Innovative Full Stack Software Developer specializing in AI-driven system design and implementation. Spearheaded the creation of an AI purchase agent and led a team in launching Amazon's BuyForMe feature in under a year.",
+      "achievements": [
+        "Owned the design/implementation for an AI purchase agent remediation system, projected to improve agent purchase success rates by 10-20%",
+        "Owned the backend design/metrics/implementation/maintenance of an Email relay system supporting agentic purchasing with 3rd party merchants (Amazon's BuyForMe), currently processing 1500+ emails per day",
+        "Helped build a new Amazon team from scratch, including interviewing candidates, mentoring 5+ new hires, and contributing to successful launch of Amazon BuyForMe feature in under a year",
+        "Owned the TypeScript React Native frontend implementation/maintenance of a native Video Platform used by all Amazon teams",
+        "Owned the JavaScript React Native frontend for 'Consult A Friend' feature and 'Cart Preview' feature"
+      ],
+      "skills": ["JavaScript", "TypeScript", "React Native", "AI Systems", "Backend Design", "Team Leadership", "Mentoring", "System Architecture", "AWS"]
+    },
+    {
+      "title": "Software Developer",
+      "company": "Inmobi",
+      "duration": "June 2017 - March 2019",
+      "location": "Irvine, CA",
+      "description": "Worked on large-scale enterprise ad-serving systems, handling millions of requests per minute and contributing to significant revenue growth through API design and system integration.",
+      "achievements": [
+        "Owned the API design for 'Direct Campaigns' project, successfully supporting hundreds of clients and bringing forth $300K in new yearly revenue",
+        "Integrated two large enterprise-level ad-serving systems into one unified system, collaborating with global teams",
+        "Enhanced and maintained large scale systems handling ~6 million requests per minute",
+        "Implemented 50+ features according to detailed and complex product specifications"
+      ],
+      "skills": ["API Design", "Enterprise Systems", "Backend Development", "System Integration", "Global Collaboration", "Product Development", "Large Scale Systems"]
+    },
+    {
+      "title": "Software Consulting Intern",
+      "company": "Tallan, Inc",
+      "duration": "July 2016 - September 2016",
+      "location": "Irvine, CA",
+      "description": "Collaborated in small teams to assist in the creation of enterprise-level insurance software systems, learning fundamental principles of software consulting and client interaction.",
+      "achievements": [
+        "Collaborated in small teams to create enterprise-level insurance software system using ASP.NET, Angular JS, and SQL Server",
+        "Learned basic principles of software consulting, including client communication and handling changing requirements"
+      ],
+      "skills": ["ASP.NET", "Angular JS", "SQL Server", "Software Consulting", "Client Communication", "Team Collaboration", "Enterprise Software"]
+    }
+  ]
+}
