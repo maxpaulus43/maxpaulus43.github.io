@@ -17,7 +17,7 @@ export default function HeroSection({ onContactClick }: HeroSectionProps) {
 
             <div className="my-8">
                 <Image
-                    src="/max_profile_3.png"
+                    src="/max_profile_6.png"
                     alt="Max Paulus Profile Picture"
                     width={200}
                     height={200}
