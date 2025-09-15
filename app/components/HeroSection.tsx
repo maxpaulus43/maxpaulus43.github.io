@@ -7,11 +7,11 @@ interface HeroSectionProps {
 export default function HeroSection({ onContactClick }: HeroSectionProps) {
     return (
         <div className="text-center mb-16">
-            <h1 className="text-6xl font-bold leading-tight mb-6 bg-gradient-to-br from-white to-cyan-400 bg-clip-text text-transparent">
+            <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6 bg-gradient-to-br from-white to-cyan-400 bg-clip-text text-transparent">
                 Building Solutions to Real Problems
             </h1>
 
-            <p className="text-xl text-gray-400 mb-8 leading-relaxed">
+            <p className="text-lg md:text-xl text-gray-400 mb-8 leading-relaxed">
                 <strong className="text-cyan-400 font-semibold">Max Paulus</strong> is a Software Developer passionate about solving new and novel problems in the fast-changing world of tech.
             </p>
 
@@ -21,11 +21,11 @@ export default function HeroSection({ onContactClick }: HeroSectionProps) {
                     alt="Max Paulus Profile Picture"
                     width={200}
                     height={200}
-                    className="w-72 h-72 object-cover rounded-full border-4 border-gray-600 bg-black mx-auto"
+                    className="w-48 h-48 md:w-72 md:h-72 object-cover rounded-full border-4 border-gray-600 bg-black mx-auto"
                 />
             </div>
 
-            <div className="flex gap-4 my-8 flex-wrap justify-center">
+            <div className="flex gap-3 md:gap-4 my-8 flex-wrap justify-center">
                 <a href="/portfolio" className="btn-primary">
                     <i className="fa fa-folder-open"></i>
                     View My Work
@@ -40,12 +40,12 @@ export default function HeroSection({ onContactClick }: HeroSectionProps) {
             </div>
 
             <div className="text-left my-12 max-w-3xl mx-auto">
-                <h2 className="text-white text-3xl font-semibold mb-4">About Me</h2>
-                <p className="text-gray-400 text-lg leading-relaxed mb-4">
+                <h2 className="text-white text-2xl md:text-3xl font-semibold mb-4">About Me</h2>
+                <p className="text-gray-400 text-base md:text-lg leading-relaxed mb-4">
                     I'm a software developer with experience at leading companies like <strong className="text-cyan-400 font-semibold">Amazon</strong> and <strong className="text-cyan-400 font-semibold">Aerserv/InMobi</strong>.
                     I specialize in building scalable web applications using modern technologies like React, Next.js, and cloud platforms.
                 </p>
-                <p className="text-gray-400 text-lg leading-relaxed mb-4">
+                <p className="text-gray-400 text-base md:text-lg leading-relaxed mb-4">
                     Currently focused on advanced React patterns, performance optimization, and building personal knowledge management systems.
                     I believe in writing clean, maintainable code that delivers exceptional user experiences.
                 </p>

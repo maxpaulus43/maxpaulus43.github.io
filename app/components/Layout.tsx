@@ -51,13 +51,13 @@ export default function Layout({ children, showContactModal = false, onContactMo
       {/* Geometric background */}
       <div className="geometric-bg"></div>
 
-      <div className="pb-20 text-xl max-w-4xl m-auto flex-grow">
+      <div className="pb-20 text-lg md:text-xl max-w-4xl m-auto flex-grow">
         {isModalOpen && (
           <ContactModal onClose={handleModalClose} />
         )}
 
         <header>
-          <nav className="navbar fixed top-0 left-0 right-0 pl-5 pr-5 h-16 flex justify-between bg-black/80 backdrop-blur-sm border-b border-gray-800 md:shadow-none md:relative z-10">
+          <nav className="navbar fixed top-0 left-0 right-0 px-3 md:px-5 h-16 flex justify-between bg-black/80 backdrop-blur-sm border-b border-gray-800 md:shadow-none md:relative z-10">
             {navItems.map((navItem) => (
               <Link
                 key={navItem.text}
@@ -70,12 +70,12 @@ export default function Layout({ children, showContactModal = false, onContactMo
           </nav>
         </header>
 
-        <main className="px-3 mt-16">
+        <main className="px-2 md:px-3 mt-16">
           {children}
         </main>
       </div>
 
-      <footer className="bg-black border-t border-gray-800 text-white flex justify-around p-6">
+      <footer className="bg-black border-t border-gray-800 text-white flex flex-col md:flex-row justify-around p-4 md:p-6 gap-4 md:gap-0">
         <div className="flex flex-col">
           <div className="text-xl font-bold text-cyan-400 mb-2">Navigate</div>
           {navItems.map((navItem) => (

@@ -85,7 +85,7 @@ a:hover {
 
 /* Tailwind Button Component Classes */
 .btn-primary {
-  @apply bg-cyan-400 text-black px-6 py-3 rounded-lg font-semibold transition-all duration-300 border-0 cursor-pointer inline-flex items-center gap-2;
+  @apply bg-cyan-400 text-black px-4 md:px-6 py-3 rounded-lg font-semibold transition-all duration-300 border-0 cursor-pointer inline-flex items-center gap-2 text-sm md:text-base;
 }
 
 .btn-primary:hover {
@@ -93,7 +93,7 @@ a:hover {
 }
 
 .btn-secondary {
-  @apply bg-transparent text-white px-6 py-3 border-2 border-gray-600 rounded-lg font-semibold transition-all duration-300 cursor-pointer inline-flex items-center gap-2;
+  @apply bg-transparent text-white px-4 md:px-6 py-3 border-2 border-gray-600 rounded-lg font-semibold transition-all duration-300 cursor-pointer inline-flex items-center gap-2 text-sm md:text-base;
 }
 
 .btn-secondary:hover {
@@ -118,7 +118,7 @@ a:hover {
 
 /* Hero section styles */
 .hero-actions {
-  @apply flex gap-4 my-8 flex-wrap justify-center;
+  @apply flex gap-3 md:gap-4 my-8 flex-wrap justify-center;
 }
 
 /* Skills preview */
@@ -136,7 +136,7 @@ a:hover {
 
 /* Homepage container */
 .homepage-container {
-  @apply max-w-5xl mx-auto px-4;
+  @apply max-w-5xl mx-auto px-2 md:px-4;
 }
 
 /* Hero Section Styles */
