@@ -1,6 +1,7 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
+import TagGroup from './TagGroup';
 
 interface ContentCardProps<T extends Record<string, any>> {
   item: T;
@@ -27,11 +28,6 @@ export default function ContentCard<T extends Record<string, any>>({
 
   const handleCardClick = () => {
     router.push(`${basePath}/${item.slug}`);
-  };
-
-  const handleTagClick = (e: React.MouseEvent, tag: string) => {
-    e.stopPropagation();
-    router.push(`${tagBasePath}/${tag.toLowerCase()}`);
   };
 
   const tags = item[tagField] as string[];
@@ -67,23 +63,16 @@ export default function ContentCard<T extends Record<string, any>>({
         </div>
         
         <div className="border-t border-gray-800 pt-4">
-          <p className="text-cyan-400 text-sm font-medium mb-3">Technologies Used:</p>
-          <div className="flex flex-wrap gap-2">
-            {tags.slice(0, 6).map((tag: string) => (
-              <button
-                key={tag}
-                onClick={(e) => handleTagClick(e, tag)}
-                className="px-3 py-1 text-xs font-medium bg-gray-800 text-gray-300 rounded-full border border-gray-700 hover:border-cyan-400 hover:text-cyan-400 transition-colors"
-              >
-                {tag}
-              </button>
-            ))}
-            {tags.length > 6 && (
-              <span className="px-3 py-1 text-xs text-gray-500">
-                +{tags.length - 6} more
-              </span>
-            )}
-          </div>
+          <TagGroup
+            tags={tags}
+            tagBasePath={tagBasePath}
+            label="Technologies Used:"
+            variant="chip"
+            size="sm"
+            prefix=""
+            maxVisible={6}
+            highlighted={highlightedTag}
+          />
         </div>
       </div>
     );
@@ -106,19 +95,15 @@ export default function ContentCard<T extends Record<string, any>>({
         </div>
         <p className="text-gray-300 text-base mb-4 leading-relaxed">{item.excerpt}</p>
         
-        {tags && tags.length > 0 && (
-          <div className="flex flex-wrap gap-2">
-            {tags.map((tag: string) => (
-              <button
-                key={tag}
-                onClick={(e) => handleTagClick(e, tag)}
-                className="px-2 py-1 text-xs bg-gray-800 text-gray-400 rounded hover:text-cyan-400 transition-colors"
-              >
-                #{tag}
-              </button>
-            ))}
-          </div>
-        )}
+        <TagGroup
+          tags={tags}
+          tagBasePath={tagBasePath}
+          variant="default"
+          size="sm"
+          prefix="#"
+          highlighted={highlightedTag}
+          showLabel={false}
+        />
       </div>
     );
   }
@@ -139,23 +124,15 @@ export default function ContentCard<T extends Record<string, any>>({
         )}
       </div>
       <div className="pt-3">
-        {tagLabel && (
-          <p className="text-sm font-medium mb-2 text-cyan-400">{tagLabel}</p>
-        )}
-        <div className="flex flex-wrap gap-2">
-          {tags.map((tag: string) => (
-            <button
-              key={tag}
-              onClick={(e) => handleTagClick(e, tag)}
-              className={`inline-block px-3 py-1 text-sm font-semibold transition-colors rounded ${highlightedTag && tag.toLowerCase() === highlightedTag.toLowerCase()
-                ? 'bg-cyan-400 text-black'
-                : 'bg-gray-800 text-gray-400 hover:text-cyan-400'
-                }`}
-            >
-              #{tag}
-            </button>
-          ))}
-        </div>
+        <TagGroup
+          tags={tags}
+          tagBasePath={tagBasePath}
+          label={tagLabel}
+          variant="default"
+          size="md"
+          prefix="#"
+          highlighted={highlightedTag}
+        />
       </div>
     </div>
   );

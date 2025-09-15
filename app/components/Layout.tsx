@@ -29,7 +29,7 @@ export default function Layout({ children, showContactModal = false, onContactMo
   const [internalShowContactModal, setInternalShowContactModal] = useState(false);
 
   const isModalOpen = showContactModal || internalShowContactModal;
-  
+
   const handleContactClick = () => {
     if (onContactClick) {
       onContactClick();
@@ -64,7 +64,7 @@ export default function Layout({ children, showContactModal = false, onContactMo
                 href={navItem.path}
                 className={`pt-3 text-white hover:text-cyan-400 transition-colors font-medium`}
               >
-                <i className={`fa ${navItem.icon} mr-2`}></i> {navItem.text}
+                {navItem.text}
               </Link>
             ))}
           </nav>

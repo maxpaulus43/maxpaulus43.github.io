@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
+import TagGroup from '../../components/TagGroup';
 import { getBlogData, getAllBlogSlugs } from '../../../lib/blog';
 
 interface BlogPageProps {
@@ -29,22 +30,15 @@ export default async function BlogPost({ params }: BlogPageProps) {
           {post.excerpt && (
             <p className="text-lg sm:text-xl text-gray-600 mb-4">{post.excerpt}</p>
           )}
-          {post.tags && post.tags.length > 0 && (
-            <div className="mb-6">
-              <p className="text-sm font-medium mb-2">Tags:</p>
-              <div className="flex flex-wrap gap-2">
-                {post.tags.map((tag: string) => (
-                  <Link
-                    key={tag}
-                    href={`/tag/${tag.toLowerCase()}`}
-                    className="inline-block bg-gray-100 hover:bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-500 hover:text-gray-700 transition-colors duration-200"
-                  >
-                    #{tag}
-                  </Link>
-                ))}
-              </div>
-            </div>
-          )}
+          <TagGroup
+            tags={post.tags || []}
+            tagBasePath="/tag"
+            label="Tags:"
+            variant="default"
+            size="md"
+            prefix="#"
+            className="mb-6"
+          />
         </div>
         
         <article 

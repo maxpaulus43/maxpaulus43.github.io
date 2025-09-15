@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
+import TagGroup from '../../components/TagGroup';
 import { getPortfolioData, getAllPortfolioSlugs } from '../../../lib/portfolio';
 
 interface PortfolioPageProps {
@@ -25,22 +26,15 @@ export default async function PortfolioPost({ params }: PortfolioPageProps) {
           {post.excerpt && (
             <p className="text-lg sm:text-xl text-gray-600 mb-4">{post.excerpt}</p>
           )}
-          {post.skills && (
-            <div className="mb-6">
-              <p className="text-sm font-medium mb-2">Skills:</p>
-              <div className="flex flex-wrap gap-2">
-                {post.skills.map((skill: string) => (
-                  <Link
-                    key={skill}
-                    href={`/skill/${skill.toLowerCase()}`}
-                    className="inline-block bg-gray-100 hover:bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-500 hover:text-gray-700 transition-colors duration-200"
-                  >
-                    #{skill}
-                  </Link>
-                ))}
-              </div>
-            </div>
-          )}
+          <TagGroup
+            tags={post.skills || []}
+            tagBasePath="/skill"
+            label="Skills:"
+            variant="default"
+            size="md"
+            prefix="#"
+            className="mb-6"
+          />
         </div>
         
         <article 
