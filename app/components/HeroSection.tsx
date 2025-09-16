@@ -42,12 +42,13 @@ export default function HeroSection({ onContactClick }: HeroSectionProps) {
             <div className="text-left my-12 max-w-3xl mx-auto">
                 <h2 className="text-white text-2xl md:text-3xl font-semibold mb-4">About Me</h2>
                 <p className="text-gray-400 text-base md:text-lg leading-relaxed mb-4">
-                    I'm a software developer with experience at leading companies like <strong className="text-cyan-400 font-semibold">Amazon</strong> and <strong className="text-cyan-400 font-semibold">Aerserv/InMobi</strong>.
-                    I specialize in building scalable web applications using modern technologies like React, Next.js, and cloud platforms.
+                    I'm a software developer with experience at leading companies like
+                    <strong className="text-cyan-400 font-semibold">Amazon</strong> and <strong className="text-cyan-400 font-semibold">InMobi</strong>.
+                    I specialize in building scalable web applications using proven technologies like React, Java, and AWS cloud.
                 </p>
                 <p className="text-gray-400 text-base md:text-lg leading-relaxed mb-4">
-                    Currently focused on advanced React patterns, performance optimization, and building personal knowledge management systems.
-                    I believe in writing clean, maintainable code that delivers exceptional user experiences.
+                    Currently focused on advanced AI patterns, AI agent optimization, and building personal knowledge management systems.
+                    I believe in writing clean, maintainable code that delivers exceptional user experiences and solves real world problems.
                 </p>
             </div>
         </div>
