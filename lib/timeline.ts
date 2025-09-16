@@ -43,7 +43,7 @@ function parsePersonalProjects(): TimelineItem[] {
       const slug = file.replace('.md', '');
 
       // Skip professional experiences that are already in experiences.json
-      if (['amazon', 'aerserv'].includes(slug)) {
+      if (['amazon', 'aerserv', 'tallan'].includes(slug)) {
         continue;
       }
 
@@ -55,14 +55,6 @@ function parsePersonalProjects(): TimelineItem[] {
       // Map personal projects to timeline format with estimated dates
       let duration = matterResult.data.duration;
       let location = 'Personal Project';
-
-      if (slug === 'maxpaul_us') {
-        duration = '2019 - Present';
-        location = 'Personal Project';
-      } else if (slug === 'zeitgeist') {
-        duration = '2018';
-        location = 'Hackathon Project';
-      }
 
       projects.push({
         title: title,
@@ -102,7 +94,6 @@ export function getMergedTimelineData(): TimelineItem[] {
   const professionalWithType = professionalExperiences.map(exp => ({
     ...exp,
     type: 'professional' as const,
-    slug: exp.company.toLowerCase().replace(/[^a-z0-9]/g, '-')
   }));
 
   // Merge and sort chronologically (most recent first)
