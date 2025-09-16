@@ -1,42 +1,89 @@
 ---
 title: Amazon
-excerpt: Built mobile shopping features for millions of users, focusing on location services and multi-factor authentication.
-skills: ['ruby', 'ci-cd', 'react-native', 'android', 'ios', 'java', 'project-management', 'teamwork', 'big-data']
-duration: "March 2019 - Present"
+excerpt: Full Stack Software Developer specializing in AI-driven systems, leading development of revolutionary purchase agent technology and BuyForMe feature.
+skills: ['typescript', 'react-native', 'ai', 'javascript', 'team-building', 'mentoring', 'email-systems', 'project-management']
+duration: "March 2019 - September 2025"
 location: "San Francisco, CA"
 ---
 
-![amazon](/portfolio/images/amazonlogo.jpg){width=150}
+![amazon](/portfolio/images/amazonlogo.jpg)
 
 ## Impact & Achievements
 
-- **50M+ users** impacted by mobile app features and improvements
-- **99.9% uptime** maintained across critical location services
-- **EU compliance** achieved for multi-factor authentication requirements
-- **Cross-platform development** across iOS, Android, and backend services
+- **10-20% improvement** in AI agent purchase success rates through remediation system
+- **1500+ emails per day** processed through BuyForMe email relay system
+- **New team built from scratch** for revolutionary AI purchasing technology
+- **Sub-1 year launch** of Amazon's BuyForMe feature with newly assembled team  
+- **5+ engineers mentored** during rapid team expansion
+- **Millions of users** impacted by video platform and shopping features
 
-## Role Overview
+## Role Evolution
 
-I started working at Amazon in March of 2019, joining the mobile shopping team in San Francisco. This role provided invaluable experience in large-scale software development, working on applications used by millions of customers worldwide.
+My 6+ year journey at Amazon has been one of continuous growth and increasing responsibility. Starting on the mobile shopping team in 2019, I evolved into a key contributor in Amazon's cutting-edge AI initiatives, ultimately helping to build and lead a new team focused on revolutionary agentic purchasing technology.
 
-At Amazon, I had the opportunity to work on the mobile shopping app for both iPhone and Android. I learned the true meaning of full-stack development - one day writing unit tests for our Android app, the next collaborating on iOS features, then fixing backend service bugs, and sometimes writing incident reports for issues affecting millions of users across the US.
+This role provided invaluable experience in large-scale AI system development, team building, and launching products that fundamentally change how customers interact with Amazon's ecosystem.
 
-Here are a few project I worked on...
+## Key Projects & Achievements
 
-## Location Violation Script
+## AI Purchase Agent Remediation System
 
-A script that analyzes the entire amazon app and checks for any unauthorized usage of device location. It runs every day, searching for violators. It's weary eyes always scanning the source code. No violations will go unpunished :fist:
+Designed and implemented a comprehensive AI remediation system that analyzes past agentic purchase logs to generate actionable improvements for AI agent reliability. This system represents the intersection of machine learning, system design, and product optimization.
 
-**Skills**: [Continuous Integration/Deployment](/skill/ci-cd/), [ruby](/skill/ruby/), [android](/skill/android/), [ios](/skill/ios/)
+**Technical Implementation:**
+- **Log Analysis**: Process and analyze historical purchase attempt data to identify failure patterns
+- **Research Collaboration**: Partner with research teams to determine optimal AI agent improvement strategies  
+- **Integration Architecture**: Seamlessly integrate with agent improvement orchestration and browser automation systems
+- **Projected Impact**: 10-20% improvement in agent purchase success rates once fully deployed
 
-## Feature Level Location Permissions
+**Skills**: [AI](/skill/ai/), [TypeScript](/skill/typescript/), system design, data analysis
 
-A page where users of the amazon app can intricately customize which parts of the app may access location. Written in react native. The amazon app is huge, and it was always a pain to figure out where exactly your location was being used. This page greatly increased transparency to our customers.
+## Amazon BuyForMe Email Relay System
 
-**Skills**: [react native](/skill/react-native/), [big data](/skill/big-data/)
+Owned the complete backend design, implementation, and maintenance of a critical email relay system supporting agentic purchasing with 3rd party merchants within the Amazon app.
 
-## Amazon Multi Factor Auth Notification
+**System Capabilities:**
+- **High-Volume Processing**: Currently handling 1500+ emails per day with growing capacity
+- **Security Hardening**: Implemented comprehensive security measures to meet Amazon's strict requirements
+- **Scalable Architecture**: Designed for continuous growth and expanding merchant partnerships
+- **Fast Delivery**: Balanced multiple trade-offs to achieve rapid feature delivery while maintaining quality
 
-In 2019, the EU started enforcing multifactor authentication for all shopping applications. This notification was written in objective C. It displayed at certain times to remind EU customers that they needed to update their payment methods. This project probably gave me the most experience with the whole software development project process.
+**Ongoing Development:**
+- **Continuous Deployment**: Currently implementing advanced CI/CD functionality
+- **Performance Optimization**: Continuously improving system efficiency and reliability
 
-**Skills**: [ios](/skill/ios/), [project management](/skill/project-management/)
+**Skills**: [email systems](/skill/email-systems/), [backend development](/skill/backend-development/), security architecture
+
+## Team Building & Leadership
+
+Led the formation of a new Amazon team dedicated to AI-powered 3rd party purchasing, transforming from concept to successful product launch in under a year.
+
+**Recruitment & Growth:**
+- **Interview Process**: Actively participated in candidate screening and technical interviews
+- **Team Scaling**: Successfully grew team from inception to full operational capacity
+- **Mentoring**: Provided guidance and technical mentorship to 5+ new hires
+- **Knowledge Transfer**: Created comprehensive onboarding documentation and processes
+
+**Cross-Team Collaboration:**
+- **Adaptability**: Successfully navigated changing partner team charters and evolving project goals
+- **Strategic Alignment**: Ensured team objectives aligned with broader Amazon initiatives
+
+**Skills**: [team building](/skill/team-building/), [mentoring](/skill/mentoring/), [project management](/skill/project-management/)
+
+## Video Platform Frontend
+
+Owned the complete TypeScript React Native implementation and maintenance of a native video platform now used by all Amazon teams for viewing videos and livestreams within the Amazon app.
+
+**Impact**: Platform-wide adoption across Amazon's mobile engineering teams
+**Technologies**: TypeScript, React Native, video streaming protocols
+
+**Skills**: [TypeScript](/skill/typescript/), [React Native](/skill/react-native/), video platforms
+
+## Additional Mobile Features
+
+### Consult A Friend
+Designed and implemented the complete frontend for a social shopping feature enabling customers to request product advice from friends within the Amazon app.
+
+### Cart Preview  
+Created an innovative cart preview feature allowing customers to view their cart contents from anywhere in the app, improving the shopping experience flow.
+
+**Skills**: [JavaScript](/skill/javascript/), [React Native](/skill/react-native/), mobile UX design
