@@ -8,7 +8,7 @@ interface TimelineSectionProps {
 export default function TimelineSection({ timelineItems }: TimelineSectionProps) {
   return (
     <section className="featured-work-section">
-      <h2>Professional Experience</h2>
+      <h2>Experience & Projects</h2>
       
       <div className="my-8">
         <Timeline items={timelineItems} />
@@ -17,7 +17,7 @@ export default function TimelineSection({ timelineItems }: TimelineSectionProps)
       <div className="section-cta">
         <a href="/portfolio" className="btn-secondary">
           <i className="fa fa-arrow-right"></i>
-          View All Experience
+          View All Work
         </a>
       </div>
     </section>

@@ -1,8 +1,8 @@
 import HomeContent from './components/HomeContent';
-import { getTimelineData } from '../lib/timeline';
+import { getMergedTimelineData } from '../lib/timeline';
 
 export default function Home() {
-  const timelineItems = getTimelineData();
+  const timelineItems = getMergedTimelineData();
 
   return <HomeContent timelineItems={timelineItems} />;
 }
