@@ -1,8 +1,16 @@
 ---
 title: Aerserv/Inmobi
-excerpt: My first job out of college. Really valuable learning about enterprise level software and the world of digital advertising.
-skills: ['java', 'ci-cd', 'mysql', 'ruby', 'aws', 'html', 'css', 'js']
-duration: "September 2017 - December 2018"
+company: Inmobi
+position: Software Developer
+excerpt: Built large-scale ad-serving systems handling millions of requests per minute.
+skills: ['API Design', 'Enterprise Systems', 'Backend Development', 'System Integration', 'Global Collaboration', 'Product Development', 'Large Scale Systems']
+duration: "June 2017 - March 2019"
+location: "Irvine, CA"
+achievements:
+  - "Owned the API design for 'Direct Campaigns' project, successfully supporting hundreds of clients and bringing forth $300K in new yearly revenue"
+  - "Integrated two large enterprise-level ad-serving systems into one unified system, collaborating with global teams"
+  - "Enhanced and maintained large scale systems handling ~6 million requests per minute"
+  - "Implemented 50+ features according to detailed and complex product specifications"
 ---
 
 ![aerserv-inmobi](/portfolio/images/aerserv-inmobi.png)

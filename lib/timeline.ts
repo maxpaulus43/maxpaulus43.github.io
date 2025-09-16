@@ -42,18 +42,15 @@ function parsePersonalProjects(): TimelineItem[] {
 
       const slug = file.replace('.md', '');
 
-      // Skip professional experiences that are already in experiences.json
-      if (['amazon', 'aerserv', 'tallan'].includes(slug)) {
-        continue;
-      }
+      // Skip professional experiences
+      if (matterResult.data.company) continue;
 
       // Extract frontmatter data
       const title = matterResult.data.title || slug;
       const excerpt = matterResult.data.excerpt || '';
       const skills = matterResult.data.skills || [];
-
-      // Map personal projects to timeline format with estimated dates
       let duration = matterResult.data.duration;
+      // Map personal projects to timeline format with estimated dates
       let location = 'Personal Project';
 
       projects.push({
@@ -77,27 +74,53 @@ function parsePersonalProjects(): TimelineItem[] {
 
 export function getTimelineData(): TimelineItem[] {
   const fs = require('fs');
-  const fullPath = path.join(timelineDirectory, 'experiences.json');
-  const fileContents = fs.readFileSync(fullPath, 'utf8');
-  const data: TimelineData = JSON.parse(fileContents);
+  const matter = require('gray-matter');
+  const portfolioDirectory = path.join(process.cwd(), 'content/portfolio');
 
-  // Return experiences in chronological order (most recent first)
-  return data.experiences;
+  try {
+    const professionalExperiences: TimelineItem[] = [];
+    const professionalSlugs = ['amazon', 'aerserv', 'tallan'];
+
+    for (const slug of professionalSlugs) {
+      const fullPath = path.join(portfolioDirectory, `${slug}.md`);
+
+      if (fs.existsSync(fullPath)) {
+        const fileContents = fs.readFileSync(fullPath, 'utf8');
+        const matterResult = matter(fileContents);
+        const frontmatter = matterResult.data;
+
+        professionalExperiences.push({
+          title: frontmatter.position || frontmatter.title,
+          company: frontmatter.company || frontmatter.title,
+          duration: frontmatter.duration,
+          location: frontmatter.location,
+          description: frontmatter.excerpt,
+          skills: frontmatter.skills || [],
+          achievements: frontmatter.achievements || [],
+          type: 'professional',
+          slug: slug
+        });
+      }
+    }
+
+    // Return experiences in chronological order (most recent first)
+    return professionalExperiences.sort((a, b) => {
+      const dateA = new Date(a.duration.split(' - ')[0] || a.duration);
+      const dateB = new Date(b.duration.split(' - ')[0] || b.duration);
+      return dateB.getTime() - dateA.getTime();
+    });
+  } catch (error) {
+    console.error('Error reading professional experiences:', error);
+    return [];
+  }
 }
 
 export function getMergedTimelineData(): TimelineItem[] {
   const professionalExperiences = getTimelineData();
   const personalProjects = parsePersonalProjects();
 
-
-  // Add type and slug to professional experiences
-  const professionalWithType = professionalExperiences.map(exp => ({
-    ...exp,
-    type: 'professional' as const,
-  }));
-
   // Merge and sort chronologically (most recent first)
-  const allItems = [...professionalWithType, ...personalProjects];
+  const allItems = [...professionalExperiences, ...personalProjects];
 
   return allItems.sort((a, b) => {
     // Simple date comparison - this is a basic implementation

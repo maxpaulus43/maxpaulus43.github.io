@@ -1,9 +1,14 @@
 ---
 title: Tallan, Inc
-excerpt: Software consulting internship where I learned enterprise software development and client management skills.
-skills: ['asp-net', 'angular-js', 'sql-server', 'consulting', 'teamwork']
+company: Tallan, Inc
+position: Software Consulting Intern
+excerpt: Developed enterprise insurance software systems and learned software consulting principles.
+skills: ['ASP.NET', 'Angular JS', 'SQL Server', 'Software Consulting', 'Client Communication', 'Team Collaboration', 'Enterprise Software']
 duration: "July 2016 - September 2016"
 location: "Irvine, CA"
+achievements:
+  - "Collaborated in small teams to create enterprise-level insurance software system using ASP.NET, Angular JS, and SQL Server"
+  - "Learned basic principles of software consulting, including client communication and handling changing requirements"
 ---
 
 ## Software Consulting Intern

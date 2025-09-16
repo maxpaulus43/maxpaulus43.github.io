@@ -1,9 +1,17 @@
 ---
 title: Amazon
-excerpt: Full Stack Software Developer specializing in AI-driven systems, leading development of revolutionary purchase agent technology and BuyForMe feature.
-skills: ['typescript', 'react-native', 'ai', 'javascript', 'team-building', 'mentoring', 'email-systems', 'project-management']
-duration: "March 2019 - Present"
+company: Amazon
+position: Full Stack Software Developer
+excerpt: Led AI-driven system design and spearheaded Amazon's BuyForMe feature launch.
+skills: ['JavaScript', 'TypeScript', 'React Native', 'AI Systems', 'Backend Design', 'Team Leadership', 'Mentoring', 'System Architecture', 'AWS']
+duration: "March 2019 - September 2025"
 location: "San Francisco, CA"
+achievements:
+  - "Owned the design/implementation for an AI purchase agent remediation system, projected to improve agent purchase success rates by 10-20%"
+  - "Owned the backend design/metrics/implementation/maintenance of an Email relay system supporting agentic purchasing with 3rd party merchants (Amazon's BuyForMe), currently processing 1500+ emails per day"
+  - "Helped build a new Amazon team from scratch, including interviewing candidates, mentoring 5+ new hires, and contributing to successful launch of Amazon BuyForMe feature in under a year"
+  - "Owned the TypeScript React Native frontend implementation/maintenance of a native Video Platform used by all Amazon teams"
+  - "Owned the JavaScript React Native frontend for 'Consult A Friend' feature and 'Cart Preview' feature"
 ---
 
 ![amazon](/portfolio/images/amazonlogo.jpg)
