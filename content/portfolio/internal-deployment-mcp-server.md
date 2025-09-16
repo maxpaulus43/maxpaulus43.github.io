@@ -2,7 +2,7 @@
 title: Internal Deployment MCP Server
 excerpt: MCP server used by 50+ engineers at Amazon to streamline deployment processes and improve developer productivity.
 skills: ['mcp', 'automation', 'developer-tools', 'documentation', 'mentoring']
-duration: "August 2025 - September 2025"
+duration: "August 2025 - Present"
 location: "Amazon"
 ---
 

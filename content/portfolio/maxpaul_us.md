@@ -2,6 +2,7 @@
 title: maxpaul.us
 excerpt: This very website! This is mostly a passion project with the upside that I can show it off as a living resumé.
 skills: ['vuejs', 'gridsome', 'netlify', 'ci-cd']
+duration: "January 2019 - Present"
 ---
 
 ## This Very Website!
@@ -26,4 +27,3 @@ I'm constantly working on this site to keep it up to date for everyone. I know, 
 ### Infrastructure: 
 
 * [Netlify](https://www.netlify.com/): netlify is a way to wire up a git repo to a website domain name. All I have to do is `git push` and my website updates automatically! What a time to be alive.
-

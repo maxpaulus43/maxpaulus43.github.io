@@ -2,6 +2,7 @@
 title: Zeitgeist
 excerpt: Zeitgeist is a google chrome extension which helps you find out what other people are thinking.
 skills: ['vuejs', 'chrome-extension', 'dynamodb', 'ci-cd']
+duration: "March 2018 - August 2018"
 ---
 
 ![zeitgeist](/portfolio/images/zeitgeist.jpeg){height=110}

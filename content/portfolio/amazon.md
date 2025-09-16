@@ -2,7 +2,7 @@
 title: Amazon
 excerpt: Full Stack Software Developer specializing in AI-driven systems, leading development of revolutionary purchase agent technology and BuyForMe feature.
 skills: ['typescript', 'react-native', 'ai', 'javascript', 'team-building', 'mentoring', 'email-systems', 'project-management']
-duration: "March 2019 - September 2025"
+duration: "March 2019 - Present"
 location: "San Francisco, CA"
 ---
 

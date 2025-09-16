@@ -1,6 +1,6 @@
 ---
 title: Chinchon Card Game
-excerpt: Multiplayer web application for playing the traditional Chinchon card game with friends, supporting up to 50 concurrent waiting rooms.
+excerpt: Multiplayer web game for playing Chinchon card game with friends online.
 skills: ['javascript', 'web-development', 'multiplayer-networking', 'game-development', 'websockets']
 duration: "May 2022 - December 2022"
 location: "Personal Project"

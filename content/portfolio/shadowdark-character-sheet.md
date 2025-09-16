@@ -2,7 +2,7 @@
 title: ShadowDark Digital Character Sheet
 excerpt: Digital character sheet tool for tabletop RPG players, serving 5000+ daily requests and integrated with popular gaming platforms.
 skills: ['javascript', 'web-development', 'community-engagement', 'user-research', 'stakeholder-management']
-duration: "September 2023 - September 2025"
+duration: "September 2023 - Present"
 location: "Personal Project"
 links:
   - name: "Live Application"

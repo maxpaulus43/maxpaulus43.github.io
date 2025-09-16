@@ -5,7 +5,7 @@
       "company": "Amazon",
       "duration": "March 2019 - September 2025",
       "location": "San Francisco, CA",
-      "description": "Innovative Full Stack Software Developer specializing in AI-driven system design and implementation. Spearheaded the creation of an AI purchase agent and led a team in launching Amazon's BuyForMe feature in under a year.",
+      "description": "Led AI-driven system design and spearheaded Amazon's BuyForMe feature launch.",
       "achievements": [
         "Owned the design/implementation for an AI purchase agent remediation system, projected to improve agent purchase success rates by 10-20%",
         "Owned the backend design/metrics/implementation/maintenance of an Email relay system supporting agentic purchasing with 3rd party merchants (Amazon's BuyForMe), currently processing 1500+ emails per day",
@@ -20,7 +20,7 @@
       "company": "Inmobi",
       "duration": "June 2017 - March 2019",
       "location": "Irvine, CA",
-      "description": "Worked on large-scale enterprise ad-serving systems, handling millions of requests per minute and contributing to significant revenue growth through API design and system integration.",
+      "description": "Built large-scale ad-serving systems handling millions of requests per minute.",
       "achievements": [
         "Owned the API design for 'Direct Campaigns' project, successfully supporting hundreds of clients and bringing forth $300K in new yearly revenue",
         "Integrated two large enterprise-level ad-serving systems into one unified system, collaborating with global teams",
@@ -34,7 +34,7 @@
       "company": "Tallan, Inc",
       "duration": "July 2016 - September 2016",
       "location": "Irvine, CA",
-      "description": "Collaborated in small teams to assist in the creation of enterprise-level insurance software systems, learning fundamental principles of software consulting and client interaction.",
+      "description": "Developed enterprise insurance software systems and learned software consulting principles.",
       "achievements": [
         "Collaborated in small teams to create enterprise-level insurance software system using ASP.NET, Angular JS, and SQL Server",
         "Learned basic principles of software consulting, including client communication and handling changing requirements"

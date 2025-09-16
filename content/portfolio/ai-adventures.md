@@ -1,6 +1,6 @@
 ---
 title: AI Adventures
-excerpt: Leveraged artificial intelligence to tackle home gardening and improvement projects, achieving sustainable solutions and significant cost savings.
+excerpt: Used AI to learn gardening and home improvement from scratch with 6+ months of success.
 skills: ['ai', 'research', 'problem-solving', 'diy', 'gardening']
 duration: "February 2025 - September 2025"
 location: "Personal Project"

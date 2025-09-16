@@ -2,8 +2,7 @@
 title: Aerserv/Inmobi
 excerpt: My first job out of college. Really valuable learning about enterprise level software and the world of digital advertising.
 skills: ['java', 'ci-cd', 'mysql', 'ruby', 'aws', 'html', 'css', 'js']
-start-date: 
-end-date: 
+duration: "September 2017 - December 2018"
 ---
 
 ![aerserv-inmobi](/portfolio/images/aerserv-inmobi.png)
