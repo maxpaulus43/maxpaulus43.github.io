@@ -28,7 +28,7 @@ export default function HomeContent({ timelineItems }: HomeContentProps) {
       onContactModalClose={handleContactModalClose}
       onContactClick={handleContactClick}
     >
-      <div className="homepage-container">
+      <div className="max-w-5xl mx-auto px-2 md:px-4">
         <HeroSection onContactClick={handleContactClick} />
         <TimelineSection timelineItems={timelineItems} />
         <LatestThoughts />
