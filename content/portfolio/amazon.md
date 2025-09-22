@@ -2,8 +2,8 @@
 title: Amazon
 company: Amazon
 position: Full Stack Software Developer
-excerpt: Led AI-driven system design and spearheaded Amazon's BuyForMe feature launch.
-skills: ['JavaScript', 'TypeScript', 'React Native', 'AI Systems', 'Backend Design', 'Team Leadership', 'Mentoring', 'System Architecture', 'AWS']
+excerpt: Led AI-driven system design and contributed to Amazon's BuyForMe feature launch.
+skills: ['JavaScript', 'TypeScript', 'React Native', 'AI Systems', 'Backend Design', 'Team Leadership', 'Mentoring', 'System Architecture', 'AWS', 'ai']
 duration: "March 2019 - September 2025"
 location: "San Francisco, CA"
 achievements:
