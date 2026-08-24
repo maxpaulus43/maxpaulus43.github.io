@@ -32,9 +32,9 @@ export const metadata: Metadata = {
     siteName: "Max Paulus",
     images: [
       {
-        url: "https://maxpaul.us/max_profile_6.webp",
-        width: 640,
-        height: 640,
+        url: "https://maxpaul.us/max-profile-pic.webp",
+        width: 900,
+        height: 900,
         alt: "Max Paulus Profile Picture",
       },
     ],
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Max Paulus — Software Developer",
     description: "Software, systems, projects, and notes from Max Paulus.",
-    images: ["https://maxpaul.us/max_profile_6.webp"],
+    images: ["https://maxpaul.us/max-profile-pic.webp"],
   },
 };
 

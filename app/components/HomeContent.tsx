@@ -38,10 +38,10 @@ export default function HomeContent({ projects, experience, posts }: HomeContent
           <div className="portrait-backing" />
           <figure className="portrait-photo">
             <Image
-              src="/max_profile_6.webp"
+              src="/max-profile-pic.webp"
               alt="Portrait of Max Paulus"
-              width={640}
-              height={640}
+              width={900}
+              height={900}
               sizes="(max-width: 620px) 70vw, (max-width: 900px) 55vw, 420px"
               priority
               fetchPriority="high"
