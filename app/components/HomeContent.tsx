@@ -37,7 +37,15 @@ export default function HomeContent({ projects, experience, posts }: HomeContent
         <div className="portrait-archive">
           <div className="portrait-backing" />
           <figure className="portrait-photo">
-            <Image src="/max_profile_6.png" alt="Portrait of Max Paulus" width={760} height={760} priority />
+            <Image
+              src="/max_profile_6.webp"
+              alt="Portrait of Max Paulus"
+              width={640}
+              height={640}
+              sizes="(max-width: 620px) 70vw, (max-width: 900px) 55vw, 420px"
+              priority
+              fetchPriority="high"
+            />
             <figcaption>Max Paulus · archive no. 043</figcaption>
           </figure>
           <aside className="portrait-note">Building quietly.<br />Shipping thoughtfully.<br />Learning constantly.<span>M. Paulus</span></aside>

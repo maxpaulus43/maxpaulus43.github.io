@@ -43,7 +43,7 @@ export default function Layout({ children, showContactModal = false, onContactMo
       {modalOpen && <ContactModal onClose={closeContact} />}
       <header className="site-header">
         <div className="site-header__inner">
-          <Link href="/" className="monogram" aria-label="Max Paulus, home">MP</Link>
+          <Link href="/" className="monogram" aria-label="MP — Max Paulus, home">MP</Link>
           <button className="menu-toggle" type="button" aria-label={menuOpen ? 'Close menu' : 'Open menu'} aria-expanded={menuOpen} onClick={() => setMenuOpen((open) => !open)}>
             <span /><span /><span />
           </button>

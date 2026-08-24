@@ -32,9 +32,9 @@ export const metadata: Metadata = {
     siteName: "Max Paulus",
     images: [
       {
-        url: "https://maxpaul.us/max_profile_6.png",
-        width: 1024,
-        height: 1024,
+        url: "https://maxpaul.us/max_profile_6.webp",
+        width: 640,
+        height: 640,
         alt: "Max Paulus Profile Picture",
       },
     ],
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Max Paulus — Software Developer",
     description: "Software, systems, projects, and notes from Max Paulus.",
-    images: ["https://maxpaul.us/max_profile_6.png"],
+    images: ["https://maxpaul.us/max_profile_6.webp"],
   },
 };
 
@@ -58,9 +58,9 @@ export default function RootLayout({
         {/* Google Analytics */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-P3MGJS5GS7"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
-        <Script id="google-analytics" strategy="afterInteractive">
+        <Script id="google-analytics" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
