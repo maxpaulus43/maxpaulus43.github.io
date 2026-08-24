@@ -4,59 +4,9 @@ import ContentCard from '../../components/ContentCard';
 import { getBlogsByTag, getAllBlogTags } from '../../../lib/blog';
 import { notFound } from 'next/navigation';
 
-interface TagPageProps {
-  params: Promise<{
-    tag: string;
-  }>;
-}
-
-export async function generateStaticParams() {
-  const tags = getAllBlogTags();
-  return tags.map((tag) => ({
-    tag: tag,
-  }));
-}
-
+interface TagPageProps { params: Promise<{ tag: string }>; }
+export async function generateStaticParams() { return getAllBlogTags().map((tag) => ({ tag })); }
 export default async function TagPage({ params }: TagPageProps) {
-  const { tag } = await params;
-  const posts = getBlogsByTag(tag);
-
-  // If no posts found for this tag, show 404
-  if (posts.length === 0) {
-    notFound();
-  }
-
-  // Capitalize tag name for display
-  const displayTag = tag.charAt(0).toUpperCase() + tag.slice(1);
-
-  return (
-    <Layout>
-      <div>
-        <div className="mb-6">
-          <Link href="/blog" className="text-blue-600 hover:text-blue-800 underline text-sm">
-            ← Back to Blog
-          </Link>
-        </div>
-
-        <h1 className="text-3xl font-bold mb-4">POSTS TAGGED WITH {displayTag.toUpperCase()}</h1>
-        <p className="text-gray-600 mb-6">
-          Found {posts.length} post{posts.length !== 1 ? 's' : ''} tagged with {displayTag}
-        </p>
-
-        <div className="flex flex-col space-y-4">
-          {posts.map((post) => (
-            <ContentCard
-              key={post.slug}
-              item={post}
-              basePath="/blog"
-              tagBasePath="/tag"
-              tagField="tags"
-              highlightedTag={tag}
-              showDate={true}
-            />
-          ))}
-        </div>
-      </div>
-    </Layout>
-  );
+  const { tag } = await params; const posts = getBlogsByTag(tag); if (!posts.length) notFound();
+  return <Layout><div className="page-frame index-page"><Link href="/blog" className="back-link">← Return to writing</Link><header className="page-intro page-intro--compact"><p className="eyebrow">Index term</p><h1>#{tag}</h1><p>{posts.length} note{posts.length === 1 ? '' : 's'} filed under this subject.</p></header><section className="paper-panel index-sheet"><div className="paper-label">Matching notes</div>{posts.map((post, index) => <ContentCard key={post.slug} item={post} basePath="/blog" tagBasePath="/tag" tagField="tags" highlightedTag={tag} showDate variant="blog" index={index} />)}</section></div></Layout>;
 }

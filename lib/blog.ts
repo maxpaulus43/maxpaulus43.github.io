@@ -1,7 +1,14 @@
 import path from 'path';
+import fs from 'fs';
+import matter from 'gray-matter';
 import { BaseContent, processMarkdownFile, extractTitleFromContent, getMarkdownFiles, generateSlugFromFilename, generateSlugParams } from './markdown-utils';
 
 const blogDirectory = path.join(process.cwd(), 'content', 'blog');
+
+function normalizeDate(value: unknown): string {
+  if (value instanceof Date) return value.toISOString().slice(0, 10);
+  return value ? String(value) : '';
+}
 
 export interface BlogPost extends BaseContent {
   slug: string;
@@ -18,8 +25,6 @@ export function getSortedBlogData(): Omit<BlogPost, 'contentHtml'>[] {
     const fullPath = path.join(blogDirectory, fileName);
     
     // For listing, we don't need to process the full markdown content
-    const fs = require('fs');
-    const matter = require('gray-matter');
     const fileContents = fs.readFileSync(fullPath, 'utf8');
     const matterResult = matter(fileContents);
 
@@ -33,7 +38,7 @@ export function getSortedBlogData(): Omit<BlogPost, 'contentHtml'>[] {
       slug,
       title,
       author: matterResult.data.author || 'Max Paulus',
-      date: matterResult.data.date ? String(matterResult.data.date) : '',
+      date: normalizeDate(matterResult.data.date),
       excerpt: matterResult.data.excerpt || '',
       tags: matterResult.data.tags || [],
     };
@@ -69,7 +74,7 @@ export async function getBlogData(slug: string): Promise<BlogPost | null> {
     contentHtml,
     title,
     author: matterResult.data.author || 'Max Paulus',
-    date: matterResult.data.date ? String(matterResult.data.date) : '',
+    date: normalizeDate(matterResult.data.date),
     excerpt: matterResult.data.excerpt || '',
     tags: matterResult.data.tags || [],
   };

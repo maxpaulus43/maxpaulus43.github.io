@@ -1,118 +1,35 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef } from 'react';
 
-interface ContactModalProps {
-  onClose: () => void;
-}
+interface ContactModalProps { onClose: () => void; }
 
 export default function ContactModal({ onClose }: ContactModalProps) {
-  const [isVisible, setIsVisible] = useState(false);
-
+  const closeButton = useRef<HTMLButtonElement>(null);
   useEffect(() => {
-    // Trigger animation after component mounts
-    setIsVisible(true);
-    
-    // Prevent body scroll when modal is open
+    const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
-    
-    return () => {
-      document.body.style.overflow = 'unset';
-    };
-  }, []);
-
-  const handleClose = () => {
-    setIsVisible(false);
-    // Delay the actual close to allow exit animation
-    setTimeout(onClose, 200);
-  };
-
-  const handleBackdropClick = (e: React.MouseEvent) => {
-    if (e.target === e.currentTarget) {
-      handleClose();
-    }
-  };
+    closeButton.current?.focus();
+    const onKeyDown = (event: KeyboardEvent) => { if (event.key === 'Escape') onClose(); };
+    window.addEventListener('keydown', onKeyDown);
+    return () => { document.body.style.overflow = previousOverflow; window.removeEventListener('keydown', onKeyDown); };
+  }, [onClose]);
 
   return (
-    <div 
-      className={`contact-modal-backdrop ${isVisible ? 'visible' : ''}`}
-      onClick={handleBackdropClick}
-    >
-      <div className={`contact-modal ${isVisible ? 'visible' : ''}`}>
-        <div className="contact-modal-header">
-          <h2>Let's Connect</h2>
-          <button
-            onClick={handleClose}
-            className="contact-modal-close"
-            aria-label="Close modal"
-          >
-            <i className="fa fa-times"></i>
-          </button>
+    <div className="contact-backdrop" role="presentation" onMouseDown={(event) => { if (event.target === event.currentTarget) onClose(); }}>
+      <section className="contact-sheet" role="dialog" aria-modal="true" aria-labelledby="contact-title">
+        <div className="paper-label">Correspondence</div>
+        <button ref={closeButton} className="modal-close" type="button" onClick={onClose} aria-label="Close contact dialog">×</button>
+        <p className="eyebrow">A note from the desk of</p>
+        <h2 id="contact-title">Max Paulus</h2>
+        <p className="contact-intro">Have an interesting problem, project, or idea? Send a note. Email is the fastest way to reach me.</p>
+        <div className="contact-options">
+          <a href="mailto:maxpaulus43@gmail.com"><span>Email</span><strong>maxpaulus43@gmail.com</strong><b>→</b></a>
+          <a href="https://linkedin.com/in/max-paulus-1b456aa8" target="_blank" rel="noreferrer"><span>LinkedIn</span><strong>Professional profile</strong><b>↗</b></a>
+          <a href="https://github.com/maxpaulus43" target="_blank" rel="noreferrer"><span>GitHub</span><strong>Code and projects</strong><b>↗</b></a>
         </div>
-        
-        <div className="contact-modal-content">
-          <p className="contact-modal-subtitle">
-            Ready to discuss your next project or just want to say hello?
-          </p>
-          
-          <div className="contact-links">
-            <a
-              href="mailto:maxpaulus43@gmail.com"
-              className="contact-link"
-            >
-              <div className="contact-link-icon">
-                <i className="fa fa-envelope"></i>
-              </div>
-              <div className="contact-link-content">
-                <span className="contact-link-title">Email</span>
-                <span className="contact-link-subtitle">maxpaulus43@gmail.com</span>
-              </div>
-              <i className="fa fa-arrow-right contact-link-arrow"></i>
-            </a>
-            
-            <a
-              href="https://linkedin.com/in/max-paulus-1b456aa8"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="contact-link"
-            >
-              <div className="contact-link-icon">
-                <i className="fab fa-linkedin"></i>
-              </div>
-              <div className="contact-link-content">
-                <span className="contact-link-title">LinkedIn</span>
-                <span className="contact-link-subtitle">Professional Profile</span>
-              </div>
-              <i className="fa fa-external-link-alt contact-link-arrow"></i>
-            </a>
-            
-            <a
-              href="https://github.com/maxpaulus43"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="contact-link"
-            >
-              <div className="contact-link-icon">
-                <i className="fab fa-github"></i>
-              </div>
-              <div className="contact-link-content">
-                <span className="contact-link-title">GitHub</span>
-                <span className="contact-link-subtitle">Code & Projects</span>
-              </div>
-              <i className="fa fa-external-link-alt contact-link-arrow"></i>
-            </a>
-          </div>
-        </div>
-        
-        <div className="contact-modal-footer">
-          <button
-            onClick={handleClose}
-            className="btn-secondary"
-          >
-            Close
-          </button>
-        </div>
-      </div>
+        <p className="signature">M. Paulus</p>
+      </section>
     </div>
   );
 }

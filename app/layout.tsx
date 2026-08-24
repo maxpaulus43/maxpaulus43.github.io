@@ -4,10 +4,10 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: "Paulus Palace",
-    template: "%s | Paulus Palace"
+    default: "Max Paulus — Software Developer",
+    template: "%s | Max Paulus"
   },
-  description: "This is where Max shows off all the stuff in his mind palace.",
+  description: "Max Paulus is a software developer building useful systems for real people.",
   keywords: ["Max Paulus", "software developer", "portfolio", "blog", "programming", "web development", "React", "Next.js"],
   authors: [{ name: "Max Paulus", url: "https://maxpaul.us" }],
   creator: "Max Paulus",
@@ -27,26 +27,23 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://maxpaul.us",
-    title: "Paulus Palace",
-    description: "This is where Max shows off all the stuff in his mind palace.",
-    siteName: "Paulus Palace",
+    title: "Max Paulus — Software Developer",
+    description: "Software, systems, projects, and notes from Max Paulus.",
+    siteName: "Max Paulus",
     images: [
       {
-        url: "https://maxpaul.us/max_profile.png",
-        width: 500,
-        height: 500,
+        url: "https://maxpaul.us/max_profile_6.png",
+        width: 1024,
+        height: 1024,
         alt: "Max Paulus Profile Picture",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Paulus Palace",
-    description: "This is where Max shows off all the stuff in his mind palace.",
-    images: ["https://maxpaul.us/max_profile.png"],
-  },
-  verification: {
-    google: "google-site-verification-code-here", // You can add your Google verification code later
+    title: "Max Paulus — Software Developer",
+    description: "Software, systems, projects, and notes from Max Paulus.",
+    images: ["https://maxpaul.us/max_profile_6.png"],
   },
 };
 
@@ -57,12 +54,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-        />
-      </head>
       <body className="antialiased">
         {/* Google Analytics */}
         <Script

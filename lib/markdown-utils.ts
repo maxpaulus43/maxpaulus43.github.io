@@ -40,11 +40,11 @@ export async function processMarkdownFile(filePath: string): Promise<{
  * Extract title from frontmatter or content, with fallback
  */
 export function extractTitleFromContent(
-  frontmatterTitle: any,
+  frontmatterTitle: unknown,
   content: string,
   fallback: string
 ): string {
-  if (frontmatterTitle) {
+  if (typeof frontmatterTitle === 'string' && frontmatterTitle) {
     return frontmatterTitle;
   }
 

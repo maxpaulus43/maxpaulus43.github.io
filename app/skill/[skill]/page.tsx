@@ -4,60 +4,9 @@ import ContentCard from '../../components/ContentCard';
 import { getPortfolioBySkill, getAllSkills } from '../../../lib/portfolio';
 import { notFound } from 'next/navigation';
 
-interface SkillPageProps {
-    params: Promise<{
-        skill: string;
-    }>;
-}
-
-export async function generateStaticParams() {
-    const skills = getAllSkills();
-    return skills.map((skill) => ({
-        skill: skill,
-    }));
-}
-
+interface SkillPageProps { params: Promise<{ skill: string }>; }
+export async function generateStaticParams() { return getAllSkills().map((skill) => ({ skill })); }
 export default async function SkillPage({ params }: SkillPageProps) {
-    const { skill } = await params;
-    const projects = getPortfolioBySkill(skill);
-
-    // If no projects found for this skill, show 404
-    if (projects.length === 0) {
-        notFound();
-    }
-
-    // Capitalize skill name for display
-    const displaySkill = skill.charAt(0).toUpperCase() + skill.slice(1);
-
-    return (
-        <Layout>
-            <div>
-                <div className="mb-6">
-                    <Link href="/portfolio" className="text-blue-600 hover:text-blue-800 underline text-sm">
-                        ← Back to Portfolio
-                    </Link>
-                </div>
-
-                <h1 className="text-3xl font-bold mb-4">PROJECTS WITH {displaySkill.toUpperCase()}</h1>
-                <p className="text-gray-600 mb-6">
-                    Found {projects.length} project{projects.length !== 1 ? 's' : ''} using {displaySkill}
-                </p>
-
-                <div className="flex flex-col space-y-4">
-                    {projects.map((project) => (
-                        <ContentCard
-                            variant='portfolio'
-                            key={project.slug}
-                            item={project}
-                            basePath="/portfolio"
-                            tagBasePath="/skill"
-                            tagField="skills"
-                            highlightedTag={skill}
-                            tagLabel="Skills:"
-                        />
-                    ))}
-                </div>
-            </div>
-        </Layout>
-    );
+  const { skill } = await params; const projects = getPortfolioBySkill(skill); if (!projects.length) notFound();
+  return <Layout><div className="page-frame index-page"><Link href="/portfolio" className="back-link">← Return to work</Link><header className="page-intro page-intro--compact"><p className="eyebrow">Technical index</p><h1>{skill}</h1><p>{projects.length} archive entr{projects.length === 1 ? 'y' : 'ies'} using this tool or discipline.</p></header><section className="paper-panel index-sheet"><div className="paper-label">Matching work</div>{projects.map((project, index) => <ContentCard key={project.slug} item={project} basePath="/portfolio" tagBasePath="/skill" tagField="skills" highlightedTag={skill} variant="portfolio" index={index} />)}</section></div></Layout>;
 }

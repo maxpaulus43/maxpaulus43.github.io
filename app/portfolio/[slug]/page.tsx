@@ -1,65 +1,32 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
-import TagGroup from '../../components/TagGroup';
+import ArchiveSketch from '../../components/ArchiveSketch';
 import { getPortfolioData, getAllPortfolioSlugs } from '../../../lib/portfolio';
 
-interface PortfolioPageProps {
-  params: Promise<{
-    slug: string;
-  }>;
-}
+interface PortfolioPageProps { params: Promise<{ slug: string }>; }
 
 export default async function PortfolioPost({ params }: PortfolioPageProps) {
   const { slug } = await params;
   const post = await getPortfolioData(slug);
-
-  if (!post) {
-    notFound();
-  }
+  if (!post) notFound();
 
   return (
     <Layout>
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mb-8">
-          <h1 className="text-3xl sm:text-4xl font-bold mb-4">{post.title}</h1>
-          {post.excerpt && (
-            <p className="text-lg sm:text-xl text-gray-600 mb-4">{post.excerpt}</p>
-          )}
-          <TagGroup
-            tags={post.skills || []}
-            tagBasePath="/skill"
-            label="Skills:"
-            variant="default"
-            size="md"
-            prefix="#"
-            className="mb-6"
-          />
-        </div>
-        
-        <article 
-          className="prose prose-base sm:prose-lg lg:prose-xl max-w-none prose-headings:text-gray-900 prose-p:text-gray-700 prose-strong:text-gray-900 prose-a:text-blue-600 hover:prose-a:text-blue-800"
-          dangerouslySetInnerHTML={{ __html: post.contentHtml || '' }}
-        />
-        
-        <div className="mt-8 pt-8 border-t">
-          <Link 
-            href="/portfolio" 
-            className="text-blue-600 hover:text-blue-800 underline"
-          >
-            ← Back to Portfolio
-          </Link>
-        </div>
-      </div>
+      <article className="page-frame detail-page">
+        <Link href="/portfolio" className="back-link">← Return to work archive</Link>
+        <header className="detail-header">
+          <div><p className="eyebrow">Case file / {post.company ? 'Experience' : 'Independent work'}</p><h1>{post.position || post.title}</h1>{post.company && <p className="detail-company">{post.company}</p>}<p className="detail-deck">{post.excerpt}</p></div>
+          <aside className="file-meta"><div><span>Period</span><strong>{post.duration || 'Ongoing'}</strong></div><div><span>Location</span><strong>{post.location || 'Remote'}</strong></div><div><span>Tools</span><strong>{post.skills.slice(0, 5).join(', ')}</strong></div></aside>
+        </header>
+        <div className="case-visual"><ArchiveSketch index={post.company ? 2 : 0} label={post.title} /><span>System study · {post.title}</span></div>
+        {post.links && post.links.length > 0 && <div className="detail-links">{post.links.map((link) => <a key={link.url} href={link.url} target="_blank" rel="noreferrer">{link.name} ↗</a>)}</div>}
+        {post.achievements && post.achievements.length > 0 && <section className="achievement-sheet"><div className="paper-label">Selected outcomes</div><ol>{post.achievements.map((achievement, index) => <li key={achievement}><span>{String(index + 1).padStart(2, '0')}</span><p>{achievement}</p></li>)}</ol></section>}
+        <div className="article-paper"><div className="paper-label">Field notes</div><div className="prose archive-prose" dangerouslySetInnerHTML={{ __html: post.contentHtml || '' }} /></div>
+        <div className="detail-tags">{post.skills.map((skill) => <Link key={skill} href={`/skill/${skill.toLowerCase()}`}>{skill}</Link>)}</div>
+      </article>
     </Layout>
   );
 }
 
-// Generate static params for all portfolio posts
-export async function generateStaticParams() {
-  const slugs = getAllPortfolioSlugs();
-  
-  return slugs.map((item) => ({
-    slug: item.params.slug,
-  }));
-}
+export async function generateStaticParams() { return getAllPortfolioSlugs().map((item) => ({ slug: item.params.slug })); }
