@@ -53,6 +53,7 @@ export function getSortedPortfolioData(): Omit<PortfolioPost, 'contentHtml'>[] {
 
   return allPortfolioData.sort((a, b) => {
     const year = (duration?: string) => {
+      if (duration?.toLowerCase().includes('present')) return 9999;
       const matches = duration?.match(/\d{4}/g);
       return matches ? Number(matches[matches.length - 1]) : 0;
     };

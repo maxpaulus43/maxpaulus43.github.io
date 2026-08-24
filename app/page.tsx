@@ -4,7 +4,7 @@ import { getSortedPortfolioData } from '../lib/portfolio';
 
 export default function Home() {
   const allWork = getSortedPortfolioData();
-  const featuredOrder = ['internal-deployment-mcp-server', 'ai-adventures', 'shadowdark-character-sheet'];
+  const featuredOrder = ['chefness', 'internal-deployment-mcp-server', 'shadowdark-character-sheet'];
   const projects = featuredOrder.map((slug) => allWork.find((item) => item.slug === slug)).filter((item): item is NonNullable<typeof item> => Boolean(item));
   const experience = allWork.filter((item) => item.company).slice(0, 3);
   const posts = getSortedBlogData().filter((post) => ['story_telling', 'discovery_cycle'].includes(post.slug));
